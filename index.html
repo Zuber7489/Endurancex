@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnduranceX - Private Markets Connected for Advisors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a2b4a;
+        }
+        
+        /* Header Component */
+        .header {
+            width: 100%;
+            height: 80px;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+        
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header.scrolled .logo,
+        .header.scrolled .nav-menu li a {
+            color: #1a2b4a;
+        }
+        
+        .logo-container {
+            width: 200px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            list-style: none;
+        }
+        
+        .nav-menu li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+        
+        .nav-menu li a:hover {
+            color: #0066cc;
+        }
+        
+        .book-call-btn {
+            width: 140px;
+            height: 40px;
+            background: #1a2b4a;
+            color: #ffffff;
+            border: none;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+        
+        .book-call-btn:hover {
+            background: #2a3b5a;
+        }
+        
+        .arrow-icon {
+            font-size: 16px;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            width: 100%;
+            min-height: calc(100vh - 80px);
+            background: linear-gradient(rgba(26, 43, 74, 0.5), rgba(26, 43, 74, 0.6)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 40px;
+        }
+        
+        .hero-content {
+            max-width: 1000px;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .hero-title {
+            font-size: 64px;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+        
+        .hero-description {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            padding: 16px 24px 16px 32px;
+            background: #ffffff;
+            color: #1a2b4a;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-primary .btn-icon {
+            width: 36px;
+            height: 36px;
+            background: #1a2b4a;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .btn-secondary {
+            padding: 16px 24px 16px 32px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: transform 0.3s, background 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary .btn-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo">ENDURANCEX</div>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#marketplace">Marketplace</a></li>
+                <li><a href="#podcast">Podcast</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#insights">Insights</a></li>
+            </ul>
+        </nav>
+        <button class="book-call-btn">
+            Book a call
+            <span class="arrow-icon">↗</span>
+        </button>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Private Markets<br>Connected for Advisors</h1>
+            <p class="hero-description">
+                Education, technology, diligence, and data connecting wealth managers and<br>
+                boutique fund managers in one system across private markets.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-primary">
+                    Request Advisor Access
+                    <span class="btn-icon">↗</span>
+                </button>
+                <button class="btn-secondary">
+                    List your fund now
+                    <span class="btn-icon">↗</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- More components will be added here one by one -->
+    
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
+
