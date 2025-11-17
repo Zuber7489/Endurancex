@@ -1012,6 +1012,15 @@
             width: 100%;
             background: #FFFFFF;
             padding: 80px 40px;
+            position: relative;
+            background-image: 
+                repeating-linear-gradient(
+                    to right,
+                    transparent,
+                    transparent 199px,
+                    rgba(0, 42, 91, 0.05) 200px,
+                    rgba(0, 42, 91, 0.05) 201px
+                );
         }
         
         .subscribe-container {
@@ -1024,11 +1033,12 @@
         }
         
         .subscribe-title {
-            font-size: 36px;
+            font-size: 42px;
             font-weight: 600;
             color: #002A5B;
             font-family: 'Playfair Display', serif;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
+            line-height: 1.2;
         }
         
         .subscribe-text {
@@ -1043,19 +1053,29 @@
         .subscribe-stats {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 12px;
         }
         
-        .subscribe-stats-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .subscribe-stats-pics {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #FFFFFF;
-            font-weight: 600;
+            margin-left: -8px;
+        }
+        
+        .subscribe-stats-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #FFFFFF;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin-left: -8px;
+        }
+        
+        .subscribe-stats-pic:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .subscribe-stats-pic:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }
         
         .subscribe-stats-text {
@@ -1071,7 +1091,7 @@
         }
         
         .subscribe-btn {
-            padding: 16px 32px;
+            padding: 16px 24px 16px 32px;
             background: #002A5B;
             color: #FFFFFF;
             border: none;
@@ -1081,16 +1101,20 @@
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
             font-family: 'Inter', sans-serif;
         }
         
         .subscribe-btn .btn-icon {
-            width: 24px;
-            height: 24px;
+            width: 36px;
+            height: 36px;
+            background: #FFFFFF;
+            color: #002A5B;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 18px;
         }
         
         @media (max-width: 968px) {
@@ -1427,7 +1451,11 @@
                 <h2 class="subscribe-title">Subscribe to Asset Backed & ATLalts</h2>
                 <p class="subscribe-text">Education and clarity are the foundation of everything we do</p>
                 <div class="subscribe-stats">
-                    <div class="subscribe-stats-image">3</div>
+                    <div class="subscribe-stats-pics">
+                        <div class="subscribe-stats-pic"></div>
+                        <div class="subscribe-stats-pic"></div>
+                        <div class="subscribe-stats-pic"></div>
+                    </div>
                     <p class="subscribe-stats-text">Thousands of downloads, hundreds of listeners and counting</p>
                 </div>
             </div>
