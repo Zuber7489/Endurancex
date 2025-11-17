@@ -1117,6 +1117,162 @@
             font-size: 18px;
         }
         
+        /* Subscribe for Insights Section */
+        .insights-section {
+            width: 100%;
+            background: #002A5B;
+            padding: 100px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .insights-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                /* Grid lines */
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 99px,
+                    rgba(255, 255, 255, 0.05) 100px,
+                    rgba(255, 255, 255, 0.05) 101px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 99px,
+                    rgba(255, 255, 255, 0.05) 100px,
+                    rgba(255, 255, 255, 0.05) 101px
+                ),
+                /* Checkerboard pattern - illuminated squares */
+                repeating-linear-gradient(
+                    0deg,
+                    transparent 0px,
+                    transparent 100px,
+                    rgba(255, 255, 255, 0.08) 100px,
+                    rgba(255, 255, 255, 0.08) 200px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent 0px,
+                    transparent 100px,
+                    rgba(255, 255, 255, 0.08) 100px,
+                    rgba(255, 255, 255, 0.08) 200px
+                );
+            background-size: 100px 100px, 100px 100px, 200px 200px, 200px 200px;
+            background-position: 0 0, 0 0, 0 0, 100px 100px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        .insights-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .insights-title {
+            font-size: 56px;
+            font-weight: 600;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 24px;
+        }
+        
+        .insights-description {
+            font-size: 20px;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+        
+        .insights-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .insights-btn-primary {
+            padding: 16px 24px 16px 32px;
+            background: #002A5B;
+            color: #FFFFFF;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s, background 0.3s;
+        }
+        
+        .insights-btn-primary:hover {
+            border-color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .insights-btn-primary .btn-icon {
+            width: 36px;
+            height: 36px;
+            background: #FFFFFF;
+            color: #002A5B;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .insights-btn-secondary {
+            padding: 16px 24px 16px 32px;
+            background: #FFFFFF;
+            color: #002A5B;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .insights-btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .insights-btn-secondary .btn-icon {
+            width: 36px;
+            height: 36px;
+            background: #002A5B;
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
         @media (max-width: 968px) {
             .learning-hub-header {
                 grid-template-columns: 1fr;
@@ -1132,6 +1288,14 @@
             
             .subscribe-btn-container {
                 justify-content: flex-start;
+            }
+            
+            .insights-title {
+                font-size: 40px;
+            }
+            
+            .insights-description {
+                font-size: 18px;
             }
         }
     </style>
@@ -1462,6 +1626,24 @@
             <div class="subscribe-btn-container">
                 <button class="subscribe-btn">
                     Subscribe to listen to podcasts for free
+                    <span class="btn-icon">→</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Subscribe for Insights Section -->
+    <section class="insights-section">
+        <div class="insights-container">
+            <h2 class="insights-title">Subscribe for insights</h2>
+            <p class="insights-description">Actionable research and perspectives shaping the future of alternative investments. Receive expert analysis, market updates, and curated conversations on private markets</p>
+            <div class="insights-buttons">
+                <button class="insights-btn-primary">
+                    Join our mailing list
+                    <span class="btn-icon">→</span>
+                </button>
+                <button class="insights-btn-secondary">
+                    Request access to the marketplace
                     <span class="btn-icon">→</span>
                 </button>
             </div>
