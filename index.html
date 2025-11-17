@@ -1860,7 +1860,11 @@
         /* Join Future Section */
         .join-future-section {
             width: 100%;
-            background: #1a2b4a;
+            background: linear-gradient(rgba(26, 43, 74, 0.85), rgba(26, 43, 74, 0.9)),
+                        url('assets/e38ba2c2841733b205ddbf46aa2c681a6d098f82.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             padding: 120px 40px;
             position: relative;
             overflow: hidden;
@@ -2027,6 +2031,252 @@
             
             .large-arrow {
                 display: none;
+            }
+        }
+        
+        /* Footer Section */
+        .footer-section {
+            width: 100%;
+            background: #FFFFFF;
+            padding: 80px 40px 0;
+            border-top: 1px solid rgba(0, 42, 91, 0.1);
+        }
+        
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 60px;
+            padding-bottom: 60px;
+        }
+        
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-square {
+            width: 40px;
+            height: 40px;
+            background: #002A5B;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            border-radius: 4px;
+        }
+        
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: #002A5B;
+            letter-spacing: 1px;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .footer-socials {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .socials-heading {
+            font-size: 16px;
+            font-weight: 600;
+            color: #002A5B;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .social-icon {
+            width: 32px;
+            height: 32px;
+            color: #002A5B;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s;
+        }
+        
+        .social-icon:hover {
+            opacity: 0.7;
+        }
+        
+        .social-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .footer-nav {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .footer-nav-column {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-nav-heading {
+            font-size: 16px;
+            font-weight: 600;
+            color: #002A5B;
+            font-family: 'Inter', sans-serif;
+            margin: 0 0 20px 0;
+        }
+        
+        .footer-nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .footer-nav-links li {
+            margin: 0;
+        }
+        
+        .footer-nav-links a {
+            font-size: 14px;
+            color: #002A5B;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            transition: opacity 0.3s;
+        }
+        
+        .footer-nav-links a:hover {
+            opacity: 0.7;
+        }
+        
+        .footer-contact {
+            background: #002A5B;
+            border-radius: 12px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-section,
+        .address-section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .contact-heading {
+            font-size: 16px;
+            font-weight: 600;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            color: #FFFFFF;
+            flex-shrink: 0;
+        }
+        
+        .contact-item a {
+            font-size: 14px;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            transition: opacity 0.3s;
+        }
+        
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+        
+        .address-text {
+            font-size: 14px;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .footer-disclaimer {
+            width: 100%;
+            background: #FFFFFF;
+            border-top: 1px solid rgba(0, 42, 91, 0.1);
+            padding: 24px 40px;
+        }
+        
+        .footer-disclaimer p {
+            font-size: 12px;
+            color: #002A5B;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            text-align: center;
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 1200px) {
+            .footer-container {
+                grid-template-columns: 1fr 1.5fr 1fr;
+                gap: 40px;
+            }
+        }
+        
+        @media (max-width: 968px) {
+            .footer-section {
+                padding: 60px 20px 0;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding-bottom: 40px;
+            }
+            
+            .footer-nav {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+            
+            .footer-contact {
+                padding: 30px;
+            }
+            
+            .footer-disclaimer {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .footer-nav {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
         }
     </style>
@@ -2578,7 +2828,101 @@
         </div>
     </section>
     
-    <!-- More components will be added here one by one -->
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <div class="logo-square">E</div>
+                    <span class="logo-text">ENDURANCEX</span>
+                </div>
+                <div class="footer-socials">
+                    <h3 class="socials-heading">Our socials</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="X (Twitter)">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-nav">
+                <div class="footer-nav-column">
+                    <h3 class="footer-nav-heading">Menu</h3>
+                    <ul class="footer-nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#marketplace">Marketplace</a></li>
+                        <li><a href="#podcast">Podcasts</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#insights">Insights</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-nav-column">
+                    <h3 class="footer-nav-heading">Resources</h3>
+                    <ul class="footer-nav-links">
+                        <li><a href="#insights">Insights</a></li>
+                        <li><a href="#atlalts">ATLalts</a></li>
+                        <li><a href="#asset-backed">Asset Backed</a></li>
+                        <li><a href="#playbook">Investment Playbook</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-nav-column">
+                    <h3 class="footer-nav-heading">Quick links</h3>
+                    <ul class="footer-nav-links">
+                        <li><a href="#terms">Terms of service</a></li>
+                        <li><a href="#privacy">Privacy Policies</a></li>
+                        <li><a href="#disclosures">Disclosures</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-contact">
+                <div class="contact-section">
+                    <h3 class="contact-heading">Contacts</h3>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <a href="mailto:andres@endurancex.io">andres@endurancex.io</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <a href="tel:404-550-8081">404-550-8081</a>
+                    </div>
+                </div>
+                
+                <div class="address-section">
+                    <h3 class="contact-heading">Address</h3>
+                    <p class="address-text">400 Downfield Way</p>
+                    <p class="address-text">Smyrna, GA 30082</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-disclaimer">
+            <p>Andres Sandate is an Investment Advisor Representative of Gramercy Park Wealth Advisors, LLC and Registered Representative of GPWA, LLC, Member FINRA/SIPC.</p>
+        </div>
+    </footer>
     
     <script>
         // Header scroll effect
