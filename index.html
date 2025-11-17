@@ -588,6 +588,217 @@
             fill: #002A5B;
         }
         
+        /* How It Works Section */
+        .how-it-works-section {
+            width: 100%;
+            background: #E6F0F7;
+            padding: 100px 40px;
+        }
+        
+        .how-it-works-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .how-it-works-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+            align-items: start;
+        }
+        
+        .how-it-works-tag {
+            display: inline-block;
+            background: #FFFFFF;
+            color: #002A5B;
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid #002A5B;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+        
+        .how-it-works-title {
+            font-size: 60px;
+            font-weight: 600;
+            color: #002A5B;
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+        }
+        
+        .how-it-works-subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            color: #002A5B;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+        
+        .steps-container {
+            position: relative;
+            margin-bottom: 80px;
+        }
+        
+        .steps-line {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            border-top: 2px dashed #002A5B;
+            z-index: 1;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .step-icon-circle {
+            width: 80px;
+            height: 80px;
+            background: #002A5B;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .step-icon-circle svg {
+            width: 40px;
+            height: 40px;
+            fill: #FFFFFF;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 32px;
+            height: 32px;
+            background: #FFFFFF;
+            border: 2px solid #002A5B;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: #002A5B;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .step-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #002A5B;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 12px;
+        }
+        
+        .step-description {
+            font-size: 16px;
+            font-weight: 400;
+            color: #002A5B;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+        }
+        
+        .relationship-diagram {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .diagram-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+        }
+        
+        .diagram-circle.left,
+        .diagram-circle.right {
+            background: #FFFFFF;
+            color: #002A5B;
+            border: 2px solid #002A5B;
+        }
+        
+        .diagram-circle.center {
+            background: #002A5B;
+            color: #FFFFFF;
+        }
+        
+        .diagram-arrow {
+            width: 60px;
+            height: 2px;
+            background: #002A5B;
+            position: relative;
+        }
+        
+        .diagram-arrow::before,
+        .diagram-arrow::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        
+        .diagram-arrow.left::before {
+            left: 0;
+            top: -4px;
+            border-width: 5px 0 5px 10px;
+            border-color: transparent transparent transparent #002A5B;
+        }
+        
+        .diagram-arrow.left::after {
+            right: 0;
+            top: -4px;
+            border-width: 5px 10px 5px 0;
+            border-color: transparent #002A5B transparent transparent;
+        }
+        
+        .diagram-arrow.right::before {
+            left: 0;
+            top: -4px;
+            border-width: 5px 0 5px 10px;
+            border-color: transparent transparent transparent #002A5B;
+        }
+        
+        .diagram-arrow.right::after {
+            right: 0;
+            top: -4px;
+            border-width: 5px 10px 5px 0;
+            border-color: transparent #002A5B transparent transparent;
+        }
+        
         /* Responsive */
         @media (max-width: 968px) {
             .advisor-access-container {
@@ -623,6 +834,41 @@
             
             .solution-heading {
                 font-size: 40px;
+            }
+            
+            .how-it-works-header {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .how-it-works-title {
+                font-size: 40px;
+            }
+            
+            .steps-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            
+            .steps-line {
+                display: none;
+            }
+            
+            .relationship-diagram {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .diagram-arrow {
+                width: 2px;
+                height: 40px;
+            }
+            
+            .diagram-arrow.left::before,
+            .diagram-arrow.left::after,
+            .diagram-arrow.right::before,
+            .diagram-arrow.right::after {
+                display: none;
             }
         }
     </style>
@@ -795,6 +1041,87 @@
                         <span>Technology</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- How It Works Section -->
+    <section class="how-it-works-section">
+        <div class="how-it-works-container">
+            <div class="how-it-works-header">
+                <div class="how-it-works-left">
+                    <span class="how-it-works-tag">How it works</span>
+                    <h2 class="how-it-works-title">How it works with EnduranceX</h2>
+                </div>
+                <div class="how-it-works-right">
+                    <p class="how-it-works-subtitle">EnduranceX simplifies how RIAs and specialist alts managers connect.</p>
+                </div>
+            </div>
+            
+            <div class="steps-container">
+                <div class="steps-line"></div>
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-icon-circle">
+                            <span class="step-number">1</span>
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="3" width="7" height="7" rx="1" fill="white"/>
+                                <rect x="14" y="3" width="7" height="7" rx="1" fill="white"/>
+                                <rect x="3" y="14" width="7" height="7" rx="1" fill="white"/>
+                                <rect x="14" y="14" width="7" height="7" rx="1" fill="white"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Discover</h3>
+                        <p class="step-description">Vetted unique, niche strategies with targeted excellence.</p>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-icon-circle">
+                            <span class="step-number">2</span>
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Education & Diligence</h3>
+                        <p class="step-description">Content, data rooms, and learning experiences.</p>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-icon-circle">
+                            <span class="step-number">3</span>
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" fill="white"/>
+                                <circle cx="18" cy="5" r="2" fill="white"/>
+                                <line x1="18" y1="4" x2="18" y2="6" stroke="#002A5B" stroke-width="1.5" stroke-linecap="round"/>
+                                <line x1="17" y1="5" x2="19" y2="5" stroke="#002A5B" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Engage & Transact</h3>
+                        <p class="step-description">Guided, simple workflows.</p>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-icon-circle">
+                            <span class="step-number">4</span>
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" fill="white"/>
+                                <path d="M18 8h-1V6c0-1.1-.9-2-2-2h-2c-1.1 0-2 .9-2 2v2h-1c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-3 0h-2V6h2v2z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Centralized & Secure</h3>
+                        <p class="step-description">100% digital, single sign-on, encrypted.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relationship-diagram">
+                <div class="diagram-circle left">Advisors</div>
+                <div class="diagram-arrow left"></div>
+                <div class="diagram-arrow left"></div>
+                <div class="diagram-circle center">EnduranceX</div>
+                <div class="diagram-arrow right"></div>
+                <div class="diagram-arrow right"></div>
+                <div class="diagram-circle right">Managers</div>
             </div>
         </div>
     </section>
