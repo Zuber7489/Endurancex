@@ -259,7 +259,7 @@ body {
 }
 
 .advisor-access-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -382,7 +382,7 @@ body {
 }
 
 .problem-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -512,7 +512,7 @@ body {
 }
 
 .solution-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -637,7 +637,7 @@ body {
 }
 
 .how-it-works-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -2920,7 +2920,7 @@ body {
 }
 
 .learning-hub-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -3072,7 +3072,7 @@ body {
 }
 
 .subscribe-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -3219,7 +3219,7 @@ body {
 }
 
 .insights-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     text-align: center;
     position: relative;
@@ -3701,7 +3701,7 @@ body {
 }
 
 .events-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -3853,7 +3853,7 @@ body {
 }
 
 .join-future-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     text-align: center;
     position: relative;
