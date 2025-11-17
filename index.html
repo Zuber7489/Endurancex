@@ -463,6 +463,125 @@
             line-height: 1.5;
         }
         
+        /* Solution Section */
+        .solution-section {
+            width: 100%;
+            background: #FFFFFF;
+            padding: 100px 40px;
+        }
+        
+        .solution-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        .solution-tag {
+            display: inline-block;
+            background: #E6F0F7;
+            color: #002A5B;
+            padding: 10px 24px;
+            border-radius: 50px;
+            border: 1px solid #002A5B;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+        
+        .solution-heading {
+            font-size: 60px;
+            font-weight: 600;
+            color: #002A5B;
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+            margin-bottom: 40px;
+        }
+        
+        .solution-btn {
+            padding: 16px 24px 16px 32px;
+            background: #002A5B;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .solution-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 42, 91, 0.3);
+        }
+        
+        .solution-btn .btn-icon {
+            width: 36px;
+            height: 36px;
+            background: #FFFFFF;
+            color: #002A5B;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .solution-right-heading {
+            font-size: 30px;
+            font-weight: 400;
+            color: #002A5B;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.4;
+            margin-bottom: 24px;
+        }
+        
+        .solution-right-text {
+            font-size: 18px;
+            color: #002A5B;
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        
+        .solution-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .solution-feature-item {
+            background: #FFFFFF;
+            border: 1px solid #E6F0F7;
+            border-radius: 50px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #002A5B;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .solution-feature-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        
         /* Responsive */
         @media (max-width: 968px) {
             .advisor-access-container {
@@ -488,6 +607,15 @@
             }
             
             .problem-heading {
+                font-size: 40px;
+            }
+            
+            .solution-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .solution-heading {
                 font-size: 40px;
             }
         }
@@ -594,6 +722,42 @@
                     <div class="problem-item">
                         <div class="problem-number">6</div>
                         <p class="problem-item-text">Workflows and systems are outdated</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="solution-container">
+            <div class="solution-left">
+                <span class="solution-tag">The EnduranceX Solution</span>
+                <h2 class="solution-heading">Discover, evaluate, and allocate.</h2>
+                <button class="solution-btn">
+                    Request a Demo
+                    <span class="btn-icon">↗</span>
+                </button>
+            </div>
+            <div class="solution-right">
+                <h3 class="solution-right-heading">EnduranceX technology enables RIAs to discover and allocate to niche and up-and-coming alternative investment offerings with targeted excellence</h3>
+                <p class="solution-right-text">Plant your flag in the private wealth channel with an integrated and sustainable plan</p>
+                <div class="solution-features">
+                    <div class="solution-feature-item">
+                        <span class="solution-feature-icon">🎓</span>
+                        <span>Education</span>
+                    </div>
+                    <div class="solution-feature-item">
+                        <span class="solution-feature-icon">🔍</span>
+                        <span>Due Diligence</span>
+                    </div>
+                    <div class="solution-feature-item">
+                        <span class="solution-feature-icon">🛡️</span>
+                        <span>Compliance</span>
+                    </div>
+                    <div class="solution-feature-item">
+                        <span class="solution-feature-icon">📊</span>
+                        <span>Technology</span>
                     </div>
                 </div>
             </div>
