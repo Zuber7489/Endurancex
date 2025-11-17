@@ -4476,3 +4476,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+/* Manager Modal - Uses same styles as Book a Call Modal */
+#managerModal .modal-left {
+    background: linear-gradient(rgba(0, 42, 91, 0.85), rgba(0, 42, 91, 0.9)),
+                url('assets/building.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

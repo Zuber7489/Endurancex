@@ -49,7 +49,7 @@
                     Request Advisor Access
                     <span class="btn-icon">↗</span>
                 </button>
-                <button class="btn-secondary">
+                <button class="btn-secondary" id="openManagerModal">
                     List your fund now
                     <span class="btn-icon">↗</span>
                 </button>
@@ -513,7 +513,7 @@
                     Request Access (for RIAs & Wealth Advisors)
                     <span class="btn-icon">↗</span>
                 </button>
-                <button class="curated-btn-secondary">
+                <button class="curated-btn-secondary" id="openManagerModal2">
                     Apply to List Your Fund (for Managers)
                     <span class="btn-icon">↗</span>
                 </button>
@@ -555,7 +555,7 @@
                     I'm an Advisor → Request Access
                     <span class="btn-icon">↗</span>
                 </button>
-                <button class="join-btn-manager">
+                <button class="join-btn-manager" id="openManagerModal3">
                     I'm a Manager → Join Marketplace
                     <span class="btn-icon">↗</span>
                 </button>
@@ -708,6 +708,35 @@
                         <input type="text" placeholder="Name of your firm" required>
                         <input type="text" placeholder="Your position" required>
                         <button type="submit" class="modal-submit-btn">Request access</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Manager Modal -->
+    <div class="modal-overlay" id="managerModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeManagerModal" aria-label="Close modal">✕</button>
+            <div class="modal-content">
+                <div class="modal-left">
+                    <div class="modal-left-content">
+                        <div class="modal-logo">
+                            <img src="assets/logo.png" alt="EnduranceX Logo">
+                        </div>
+                        <h2 class="modal-left-title">We are continually seeking to build partnerships with specialist and differentiated alternative investment managers that demonstrate targeted excellence and a commitment to and capacity for pursuing the private wealth channel.</h2>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <h2 class="modal-right-title">List my fund or offering on EnduranceX</h2>
+                    <form class="modal-form" id="managerForm">
+                        <input type="text" placeholder="Your name" required>
+                        <input type="email" placeholder="Your email" required>
+                        <input type="tel" placeholder="Your phone number" required>
+                        <input type="text" placeholder="Investment Strategy" required>
+                        <input type="text" placeholder="Name of your firm" required>
+                        <input type="text" placeholder="Your position" required>
+                        <button type="submit" class="modal-submit-btn">Request a call back</button>
                     </form>
                 </div>
             </div>

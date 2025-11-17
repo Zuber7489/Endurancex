@@ -118,13 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Close modal on Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            modal.classList.remove('active');
-            document.body.style.overflow = ''; // Restore scrolling
-        }
-    });
+    // Close modal on Escape key (handled in unified handler below)
     
     // Handle form submission
     if (bookCallForm) {
@@ -194,13 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Close modal on Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && requestAccessModal.classList.contains('active')) {
-            requestAccessModal.classList.remove('active');
-            document.body.style.overflow = ''; // Restore scrolling
-        }
-    });
+    // Close modal on Escape key (handled in unified handler below)
     
     // Handle form submission
     if (requestAccessForm) {
@@ -229,6 +217,90 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Close modal after successful submission
                     requestAccessModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }, 1500);
+            }, 1000);
+        });
+    }
+    
+    // Manager Modal Functionality
+    const openManagerBtns = document.querySelectorAll('#openManagerModal, #openManagerModal2, #openManagerModal3');
+    const closeManagerModalBtn = document.getElementById('closeManagerModal');
+    const managerModal = document.getElementById('managerModal');
+    const managerForm = document.getElementById('managerForm');
+    
+    // Open modal for all manager buttons
+    openManagerBtns.forEach(btn => {
+        if (btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                managerModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
+        }
+    });
+    
+    // Close modal
+    if (closeManagerModalBtn) {
+        closeManagerModalBtn.addEventListener('click', function() {
+            managerModal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+    }
+    
+    // Close modal when clicking outside
+    if (managerModal) {
+        managerModal.addEventListener('click', function(e) {
+            if (e.target === managerModal) {
+                managerModal.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        });
+    }
+    
+    // Close modal on Escape key (handle all modals)
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            if (managerModal && managerModal.classList.contains('active')) {
+                managerModal.classList.remove('active');
+                document.body.style.overflow = '';
+            } else if (requestAccessModal && requestAccessModal.classList.contains('active')) {
+                requestAccessModal.classList.remove('active');
+                document.body.style.overflow = '';
+            } else if (modal && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+    });
+    
+    // Handle form submission
+    if (managerForm) {
+        managerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitButton = managerForm.querySelector('.modal-submit-btn');
+            const originalText = submitButton.textContent;
+            
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Requesting...';
+            
+            // Simulate form submission (replace with actual API call)
+            setTimeout(function() {
+                // Show success message
+                submitButton.textContent = 'Requested!';
+                submitButton.style.background = '#28a745';
+                
+                // Reset form after delay
+                setTimeout(function() {
+                    managerForm.reset();
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalText;
+                    submitButton.style.background = '';
+                    
+                    // Close modal after successful submission
+                    managerModal.classList.remove('active');
                     document.body.style.overflow = '';
                 }, 1500);
             }, 1000);
