@@ -1482,6 +1482,194 @@
             position: relative;
         }
         
+        /* Curated Marketplace Section */
+        .curated-section {
+            width: 100%;
+            background: #002A5B;
+            padding: 100px 40px;
+        }
+        
+        .curated-container {
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+        
+        .curated-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+            align-items: start;
+        }
+        
+        .curated-tag {
+            display: inline-block;
+            background: transparent;
+            color: #FFFFFF;
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: 1px solid #FFFFFF;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+        
+        .curated-title {
+            font-size: 60px;
+            font-weight: 600;
+            color: #FFFFFF;
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+        }
+        
+        .curated-description {
+            font-size: 32px;
+            font-weight: 400;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+        
+        .categories-grid {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 30px;
+            margin-bottom: 60px;
+            justify-content: flex-start;
+            overflow-x: auto;
+        }
+        
+        .category-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 0 0 auto;
+            min-width: 160px;
+        }
+        
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            background: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: #002A5B;
+        }
+        
+        .category-icon svg {
+            width: 30px;
+            height: 30px;
+            stroke: #002A5B;
+            fill: #002A5B;
+        }
+        
+        .category-name {
+            font-size: 24px;
+            font-weight: 600;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 8px;
+        }
+        
+        .category-desc {
+            font-size: 16px;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            opacity: 0.9;
+        }
+        
+        .curated-bottom-text {
+            font-size: 32px;
+            font-weight: 400;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            margin-bottom: 50px;
+            text-align: left;
+            max-width: 100%;
+        }
+        
+        .curated-buttons {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .curated-btn-primary {
+            padding: 16px 24px 16px 32px;
+            background: #FFFFFF;
+            color: #002A5B;
+            border: 1px solid #002A5B;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .curated-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .curated-btn-primary .btn-icon {
+            width: 36px;
+            height: 36px;
+            background: #002A5B;
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .curated-btn-secondary {
+            padding: 16px 24px 16px 32px;
+            background: #002A5B;
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: transform 0.3s, background 0.3s;
+        }
+        
+        .curated-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .curated-btn-secondary .btn-icon {
+            width: 36px;
+            height: 36px;
+            background: #FFFFFF;
+            color: #002A5B;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
         @media (max-width: 968px) {
             .playbook-landing-section {
                 grid-template-columns: 1fr;
@@ -1497,6 +1685,26 @@
             
             .playbook-form-title {
                 font-size: 28px;
+            }
+            
+            .curated-header {
+                grid-template-columns: 1fr;
+            }
+            
+            .curated-title {
+                font-size: 40px;
+            }
+            
+            .categories-grid {
+                flex-direction: column;
+            }
+            
+            .curated-bottom-text {
+                font-size: 24px;
+            }
+            
+            .curated-buttons {
+                justify-content: flex-start;
             }
         }
     </style>
@@ -1907,6 +2115,100 @@
                     <div class="playbook-stats-pic"></div>
                 </div>
                 <p class="playbook-stats-text">20K+ downloads this month</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Curated Marketplace Section -->
+    <section class="curated-section">
+        <div class="curated-container">
+            <div class="curated-header">
+                <div class="curated-left">
+                    <span class="curated-tag">Marketplace Categories</span>
+                    <h2 class="curated-title">Curated and not crowded.</h2>
+                </div>
+                <div class="curated-right">
+                    <p class="curated-description">Only 3-5 managers per category each vetted for specialization, differentiation, and targeted excellence.</p>
+                </div>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-item">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3 class="category-name">Income</h3>
+                    <p class="category-desc">Yield-focused strategies</p>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M7 7h10v10"/>
+                        </svg>
+                    </div>
+                    <h3 class="category-name">Growth</h3>
+                    <p class="category-desc">Capital appreciation</p>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <h3 class="category-name">Inflation Protection</h3>
+                    <p class="category-desc">Real asset exposure</p>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18.178 8.088a4.5 4.5 0 0 1 0 7.824M5.822 8.088a4.5 4.5 0 0 0 0 7.824"/>
+                        </svg>
+                    </div>
+                    <h3 class="category-name">Hedged & Absolute Return</h3>
+                    <p class="category-desc">Uncorrelated performance</p>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="category-name">Special Situations</h3>
+                    <p class="category-desc">Opportunistic investments</p>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M9 9h6v6H9z"/>
+                            <path d="M12 3v18"/>
+                            <path d="M3 12h18"/>
+                        </svg>
+                    </div>
+                    <h3 class="category-name">Digital Assets</h3>
+                    <p class="category-desc">The future of markets & money</p>
+                </div>
+            </div>
+            
+            <p class="curated-bottom-text">Each fund listed on EnduranceX is managed by a boutique, niche, and often capacity-constrained manager with a clear edge and deep expertise in their domain.</p>
+            
+            <div class="curated-buttons">
+                <button class="curated-btn-primary">
+                    Request Access (for RIAs & Wealth Advisors)
+                    <span class="btn-icon">↗</span>
+                </button>
+                <button class="curated-btn-secondary">
+                    Apply to List Your Fund (for Managers)
+                    <span class="btn-icon">↗</span>
+                </button>
             </div>
         </div>
     </section>
