@@ -726,7 +726,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 40px;
+            gap: 30px;
             margin-top: 60px;
         }
         
@@ -741,6 +741,7 @@
             font-weight: 600;
             font-family: 'Inter', sans-serif;
             position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
         
         .diagram-circle.left,
@@ -755,47 +756,42 @@
             color: #FFFFFF;
         }
         
+        .diagram-arrows-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            justify-content: center;
+        }
+        
         .diagram-arrow {
-            width: 60px;
+            width: 80px;
             height: 2px;
             background: #002A5B;
             position: relative;
         }
         
-        .diagram-arrow::before,
-        .diagram-arrow::after {
+        .diagram-arrow.arrow-right::after {
             content: '';
             position: absolute;
+            right: 0;
+            top: -4px;
             width: 0;
             height: 0;
             border-style: solid;
-        }
-        
-        .diagram-arrow.left::before {
-            left: 0;
-            top: -4px;
-            border-width: 5px 0 5px 10px;
+            border-width: 5px 0 5px 8px;
             border-color: transparent transparent transparent #002A5B;
         }
         
-        .diagram-arrow.left::after {
-            right: 0;
-            top: -4px;
-            border-width: 5px 10px 5px 0;
-            border-color: transparent #002A5B transparent transparent;
-        }
-        
-        .diagram-arrow.right::before {
+        .diagram-arrow.arrow-left::after {
+            content: '';
+            position: absolute;
             left: 0;
             top: -4px;
-            border-width: 5px 0 5px 10px;
-            border-color: transparent transparent transparent #002A5B;
-        }
-        
-        .diagram-arrow.right::after {
-            right: 0;
-            top: -4px;
-            border-width: 5px 10px 5px 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 8px 5px 0;
             border-color: transparent #002A5B transparent transparent;
         }
         
@@ -859,16 +855,12 @@
                 gap: 30px;
             }
             
-            .diagram-arrow {
-                width: 2px;
-                height: 40px;
+            .diagram-arrows-container {
+                transform: rotate(90deg);
             }
             
-            .diagram-arrow.left::before,
-            .diagram-arrow.left::after,
-            .diagram-arrow.right::before,
-            .diagram-arrow.right::after {
-                display: none;
+            .diagram-arrow {
+                width: 40px;
             }
         }
     </style>
@@ -1116,11 +1108,15 @@
             
             <div class="relationship-diagram">
                 <div class="diagram-circle left">Advisors</div>
-                <div class="diagram-arrow left"></div>
-                <div class="diagram-arrow left"></div>
+                <div class="diagram-arrows-container">
+                    <div class="diagram-arrow arrow-right"></div>
+                    <div class="diagram-arrow arrow-left"></div>
+                </div>
                 <div class="diagram-circle center">EnduranceX</div>
-                <div class="diagram-arrow right"></div>
-                <div class="diagram-arrow right"></div>
+                <div class="diagram-arrows-container">
+                    <div class="diagram-arrow arrow-right"></div>
+                    <div class="diagram-arrow arrow-left"></div>
+                </div>
                 <div class="diagram-circle right">Managers</div>
             </div>
         </div>
