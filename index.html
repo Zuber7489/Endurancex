@@ -1707,6 +1707,155 @@
                 justify-content: flex-start;
             }
         }
+        
+        /* Events Section */
+        .events-section {
+            width: 100%;
+            background: #FFFFFF;
+            padding: 100px 40px;
+            position: relative;
+        }
+        
+        .events-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+        }
+        
+        .events-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: rgba(0, 42, 91, 0.1);
+            transform: translateX(-50%);
+        }
+        
+        .events-left {
+            padding-right: 40px;
+        }
+        
+        .events-title {
+            font-size: 48px;
+            font-weight: 600;
+            color: #002A5B;
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+        
+        .events-description {
+            font-size: 20px;
+            color: #002A5B;
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .events-stats {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .events-stats-pics {
+            display: flex;
+            margin-left: -8px;
+        }
+        
+        .events-stats-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #FFFFFF;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin-left: -8px;
+        }
+        
+        .events-stats-pic:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .events-stats-pic:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .events-stats-text {
+            font-size: 14px;
+            color: #002A5B;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .events-right {
+            padding-left: 40px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+        .events-btn {
+            padding: 16px 24px 16px 32px;
+            background: #002A5B;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .events-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 42, 91, 0.3);
+        }
+        
+        .events-btn .btn-icon {
+            width: 36px;
+            height: 36px;
+            background: #FFFFFF;
+            color: #002A5B;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        @media (max-width: 968px) {
+            .events-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .events-container::before {
+                display: none;
+            }
+            
+            .events-left {
+                padding-right: 0;
+            }
+            
+            .events-right {
+                padding-left: 0;
+                justify-content: flex-start;
+            }
+            
+            .events-title {
+                font-size: 36px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2207,6 +2356,30 @@
                 </button>
                 <button class="curated-btn-secondary">
                     Apply to List Your Fund (for Managers)
+                    <span class="btn-icon">↗</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Events Section -->
+    <section class="events-section">
+        <div class="events-container">
+            <div class="events-left">
+                <h2 class="events-title">Request access to EnduranceX Events</h2>
+                <p class="events-description">We are about community and experiences. We offer exclusive online and in-person events and targeted experiences to connect, engage, exchange, and learn.</p>
+                <div class="events-stats">
+                    <div class="events-stats-pics">
+                        <div class="events-stats-pic"></div>
+                        <div class="events-stats-pic"></div>
+                        <div class="events-stats-pic"></div>
+                    </div>
+                    <p class="events-stats-text">Thousands of downloads, hundreds of listeners and counting</p>
+                </div>
+            </div>
+            <div class="events-right">
+                <button class="events-btn">
+                    Request access to EnduranceX Events
                     <span class="btn-icon">↗</span>
                 </button>
             </div>
