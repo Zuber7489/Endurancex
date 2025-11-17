@@ -1856,6 +1856,179 @@
                 font-size: 36px;
             }
         }
+        
+        /* Join Future Section */
+        .join-future-section {
+            width: 100%;
+            background: #1a2b4a;
+            padding: 120px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .join-future-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(ellipse 200px 100px at 20% 30%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+                radial-gradient(ellipse 200px 100px at 60% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+                radial-gradient(ellipse 200px 100px at 80% 70%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(255, 255, 255, 0.01) 40px,
+                    rgba(255, 255, 255, 0.01) 80px
+                );
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        .join-future-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .join-future-title {
+            font-size: 64px;
+            font-weight: 600;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+        
+        .join-future-description {
+            font-size: 24px;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 50px;
+            opacity: 0.95;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .join-future-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        
+        .join-btn-advisor {
+            padding: 16px 24px 16px 32px;
+            background: #364a67;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .join-btn-advisor:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .join-btn-advisor .btn-icon {
+            width: 36px;
+            height: 36px;
+            background: #FFFFFF;
+            color: #002A5B;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .join-btn-manager {
+            padding: 16px 24px 16px 32px;
+            background: #FFFFFF;
+            color: #002A5B;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        
+        .join-btn-manager:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .join-btn-manager .btn-icon {
+            width: 36px;
+            height: 36px;
+            background: #002A5B;
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .large-arrow {
+            position: absolute;
+            left: calc(50% + 200px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 150px;
+            height: 6px;
+            background: #FFFFFF;
+        }
+        
+        .large-arrow::after {
+            content: '';
+            position: absolute;
+            right: -12px;
+            top: -10px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 13px 0 13px 25px;
+            border-color: transparent transparent transparent #FFFFFF;
+        }
+        
+        @media (max-width: 968px) {
+            .join-future-title {
+                font-size: 40px;
+            }
+            
+            .join-future-description {
+                font-size: 20px;
+            }
+            
+            .large-arrow {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2382,6 +2555,25 @@
                     Request access to EnduranceX Events
                     <span class="btn-icon">↗</span>
                 </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Join Future Section -->
+    <section class="join-future-section">
+        <div class="join-future-container">
+            <h2 class="join-future-title">Join the Future of Private Markets</h2>
+            <p class="join-future-description">EnduranceX makes private markets accessible, transparent, and efficient through technology, education, and experience.</p>
+            <div class="join-future-buttons">
+                <button class="join-btn-advisor">
+                    I'm an Advisor → Request Access
+                    <span class="btn-icon">↗</span>
+                </button>
+                <button class="join-btn-manager">
+                    I'm a Manager → Join Marketplace
+                    <span class="btn-icon">↗</span>
+                </button>
+           
             </div>
         </div>
     </section>
