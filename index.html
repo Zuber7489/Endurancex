@@ -358,6 +358,19 @@
             align-items: start;
         }
         
+        .problem-left {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .problem-right {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: flex-start;
+        }
+        
         .problem-tag {
             display: inline-block;
             background: #E6F0F7;
@@ -371,12 +384,15 @@
         }
         
         .problem-heading {
-            font-size: 60px;
+            font-size: 50px;
             font-weight: 600;
             color: #002A5B;
             font-family: 'Playfair Display', serif;
-            line-height: 1.1;
+            line-height: 1.15;
             margin-bottom: 30px;
+            flex-grow: 1;
+            max-width: 100%;
+            word-break: keep-all;
         }
         
         .problem-subheading {
@@ -394,12 +410,14 @@
         }
         
         .problem-description {
-            font-size: 18px;
+            font-size: 30px;
             color: #002A5B;
-            line-height: 1.6;
+            line-height: 1.4;
             font-weight: 400;
             font-family: 'Inter', sans-serif;
             margin-bottom: 40px;
+            flex-shrink: 0;
+            margin-top: 60px;
         }
         
         .problem-list {
@@ -542,7 +560,7 @@
         <div class="problem-container">
             <div class="problem-left">
                 <span class="problem-tag">The Problem</span>
-                <h2 class="problem-heading">Differentiation is disappearing.<br>The same managers.<br>The same playbooks.</h2>
+                <h2 class="problem-heading">Differentiation is<br>disappearing.<br>The same managers.<br>The same playbooks.</h2>
                 <p class="problem-subheading">Problems shared by both Advisors and Managers</p>
                 <div class="problem-arrow">→</div>
             </div>
