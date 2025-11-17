@@ -442,22 +442,16 @@ body {
 .problem-large-arrow {
     position: relative;
     width: 200px;
-    height: 7px;
-    background: #002A5B;
+    height: auto;
     margin-top: 40px;
     display: block;
 }
 
-.problem-large-arrow::after {
-    content: '';
-    position: absolute;
-    right: -15px;
-    top: -12px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 16px 0 16px 30px;
-    border-color: transparent transparent transparent #002A5B;
+.problem-large-arrow .arrow-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .problem-description {
@@ -987,14 +981,7 @@ body {
     
     .problem-large-arrow {
         width: 150px;
-        height: 6px;
         margin-top: 30px;
-    }
-    
-    .problem-large-arrow::after {
-        border-width: 12px 0 12px 24px;
-        right: -12px;
-        top: -10px;
     }
     
     /* Solution Section */
@@ -1427,14 +1414,7 @@ body {
     
     .problem-large-arrow {
         width: 120px;
-        height: 5px;
         margin-top: 25px;
-    }
-    
-    .problem-large-arrow::after {
-        border-width: 10px 0 10px 20px;
-        right: -10px;
-        top: -8px;
     }
     
     .solution-right-text {
