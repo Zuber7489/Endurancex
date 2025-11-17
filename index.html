@@ -579,7 +579,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
+            flex-shrink: 0;
+        }
+        
+        .solution-feature-icon svg {
+            width: 100%;
+            height: 100%;
+            fill: #002A5B;
         }
         
         /* Responsive */
@@ -744,19 +750,48 @@
                 <p class="solution-right-text">Plant your flag in the private wealth channel with an integrated and sustainable plan</p>
                 <div class="solution-features">
                     <div class="solution-feature-item">
-                        <span class="solution-feature-icon">🎓</span>
+                        <span class="solution-feature-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" fill="#002A5B"/>
+                                <circle cx="12" cy="9" r="1" fill="#002A5B"/>
+                            </svg>
+                        </span>
                         <span>Education</span>
                     </div>
                     <div class="solution-feature-item">
-                        <span class="solution-feature-icon">🔍</span>
+                        <span class="solution-feature-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="4" y="2" width="12" height="16" rx="1" fill="none" stroke="#002A5B" stroke-width="1.5"/>
+                                <path d="M7 4h6v2H7V4z" fill="#002A5B"/>
+                                <circle cx="18" cy="6" r="3" fill="none" stroke="#002A5B" stroke-width="1.5"/>
+                                <line x1="18" y1="4" x2="18" y2="8" stroke="#002A5B" stroke-width="1.5" stroke-linecap="round"/>
+                                <line x1="16" y1="6" x2="20" y2="6" stroke="#002A5B" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </span>
                         <span>Due Diligence</span>
                     </div>
                     <div class="solution-feature-item">
-                        <span class="solution-feature-icon">🛡️</span>
+                        <span class="solution-feature-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="none" stroke="#002A5B" stroke-width="1.5"/>
+                                <circle cx="12" cy="8" r="2" fill="none" stroke="#002A5B" stroke-width="1.5"/>
+                                <path d="M9 12l3 3 6-6" stroke="#002A5B" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
                         <span>Compliance</span>
                     </div>
                     <div class="solution-feature-item">
-                        <span class="solution-feature-icon">📊</span>
+                        <span class="solution-feature-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="3" width="8" height="10" fill="#002A5B" opacity="0.8"/>
+                                <rect x="3" y="15" width="8" height="6" fill="#002A5B" opacity="0.6"/>
+                                <rect x="13" y="11" width="8" height="10" fill="#002A5B" opacity="0.8"/>
+                                <rect x="13" y="3" width="8" height="6" fill="#002A5B" opacity="0.4"/>
+                                <circle cx="20" cy="5" r="1.5" fill="#002A5B"/>
+                                <line x1="20" y1="3.5" x2="20" y2="6.5" stroke="#002A5B" stroke-width="1.5" stroke-linecap="round"/>
+                                <line x1="18.5" y1="5" x2="21.5" y2="5" stroke="#002A5B" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </span>
                         <span>Technology</span>
                     </div>
                 </div>
