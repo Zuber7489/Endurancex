@@ -158,5 +158,81 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1000);
         });
     }
+    
+    // Request Access Modal Functionality
+    const openRequestAccessBtns = document.querySelectorAll('#openRequestAccessModal, #openRequestAccessModal2, #openRequestAccessModal3, #openRequestAccessModal4');
+    const closeRequestAccessModalBtn = document.getElementById('closeRequestAccessModal');
+    const requestAccessModal = document.getElementById('requestAccessModal');
+    const requestAccessForm = document.getElementById('requestAccessForm');
+    
+    // Open modal for all request access buttons
+    openRequestAccessBtns.forEach(btn => {
+        if (btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                requestAccessModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
+        }
+    });
+    
+    // Close modal
+    if (closeRequestAccessModalBtn) {
+        closeRequestAccessModalBtn.addEventListener('click', function() {
+            requestAccessModal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+    }
+    
+    // Close modal when clicking outside
+    if (requestAccessModal) {
+        requestAccessModal.addEventListener('click', function(e) {
+            if (e.target === requestAccessModal) {
+                requestAccessModal.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        });
+    }
+    
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && requestAccessModal.classList.contains('active')) {
+            requestAccessModal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    });
+    
+    // Handle form submission
+    if (requestAccessForm) {
+        requestAccessForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitButton = requestAccessForm.querySelector('.modal-submit-btn');
+            const originalText = submitButton.textContent;
+            
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Requesting...';
+            
+            // Simulate form submission (replace with actual API call)
+            setTimeout(function() {
+                // Show success message
+                submitButton.textContent = 'Requested!';
+                submitButton.style.background = '#28a745';
+                
+                // Reset form after delay
+                setTimeout(function() {
+                    requestAccessForm.reset();
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalText;
+                    submitButton.style.background = '';
+                    
+                    // Close modal after successful submission
+                    requestAccessModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }, 1500);
+            }, 1000);
+        });
+    }
 });
 

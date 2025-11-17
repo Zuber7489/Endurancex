@@ -4467,3 +4467,12 @@ body {
         font-size: 13px;
     }
 }
+
+/* Request Access Modal - Uses same styles as Book a Call Modal */
+#requestAccessModal .modal-left {
+    background: linear-gradient(rgba(0, 42, 91, 0.85), rgba(0, 42, 91, 0.9)),
+                url('assets/building.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -359,7 +359,7 @@
                     Join our mailing list
                     <span class="btn-icon">→</span>
                 </button>
-                <button class="insights-btn-secondary">
+                <button class="insights-btn-secondary" id="openRequestAccessModal4">
                     Request access to the marketplace
                     <span class="btn-icon">→</span>
                 </button>
@@ -509,7 +509,7 @@
             <p class="curated-bottom-text">Each fund listed on EnduranceX is managed by a boutique, niche, and often capacity-constrained manager with a clear edge and deep expertise in their domain.</p>
             
             <div class="curated-buttons">
-                <button class="curated-btn-primary">
+                <button class="curated-btn-primary" id="openRequestAccessModal3">
                     Request Access (for RIAs & Wealth Advisors)
                     <span class="btn-icon">↗</span>
                 </button>
@@ -537,7 +537,7 @@
                 </div>
             </div>
             <div class="events-right">
-                <button class="events-btn">
+                <button class="events-btn" id="openRequestAccessModal">
                     Request access to EnduranceX Events
                     <span class="btn-icon">↗</span>
                 </button>
@@ -551,7 +551,7 @@
             <h2 class="join-future-title">Join the Future of Private Markets</h2>
             <p class="join-future-description">EnduranceX makes private markets accessible, transparent, and efficient through technology, education, and experience.</p>
             <div class="join-future-buttons">
-                <button class="join-btn-advisor">
+                <button class="join-btn-advisor" id="openRequestAccessModal2">
                     I'm an Advisor → Request Access
                     <span class="btn-icon">↗</span>
                 </button>
@@ -680,6 +680,34 @@
                         <input type="tel" placeholder="Your phone number" required>
                         <input type="text" placeholder="Name of your firm" required>
                         <button type="submit" class="modal-submit-btn">Book</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Request Access Modal -->
+    <div class="modal-overlay" id="requestAccessModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeRequestAccessModal" aria-label="Close modal">✕</button>
+            <div class="modal-content">
+                <div class="modal-left">
+                    <div class="modal-left-content">
+                        <div class="modal-logo">
+                            <img src="assets/logo.png" alt="EnduranceX Logo">
+                        </div>
+                        <h2 class="modal-left-title">Experiences. Authentic engagement. Learning. Partnership building.</h2>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <h2 class="modal-right-title">Ready to access EnduranceX events?</h2>
+                    <form class="modal-form" id="requestAccessForm">
+                        <input type="text" placeholder="Your name" required>
+                        <input type="email" placeholder="Your email" required>
+                        <input type="tel" placeholder="Your phone number" required>
+                        <input type="text" placeholder="Name of your firm" required>
+                        <input type="text" placeholder="Your position" required>
+                        <button type="submit" class="modal-submit-btn">Request access</button>
                     </form>
                 </div>
             </div>
