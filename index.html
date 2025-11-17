@@ -1298,6 +1298,207 @@
                 font-size: 18px;
             }
         }
+        
+        /* Playbook Landing Section */
+        .playbook-landing-section {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            min-height: 100vh;
+        }
+        
+        .playbook-left {
+            background: linear-gradient(rgba(0, 42, 91, 0.85), rgba(0, 42, 91, 0.9)),
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 180px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        
+        .playbook-tag {
+            display: inline-block;
+            background: transparent;
+            color: #FFFFFF;
+            padding: 10px 24px;
+            border-radius: 50px;
+            border: 1px solid #FFFFFF;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            width: fit-content;
+        }
+        
+        .playbook-title {
+            font-size: 48px;
+            font-weight: 600;
+            color: #FFFFFF;
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+        
+        .playbook-description {
+            font-size: 20px;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            opacity: 0.95;
+            margin-bottom: 40px;
+        }
+        
+        .playbook-stats {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .playbook-stats-pics {
+            display: flex;
+            margin-left: -8px;
+        }
+        
+        .playbook-stats-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #FFFFFF;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin-left: -8px;
+        }
+        
+        .playbook-stats-pic:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .playbook-stats-pic:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .playbook-stats-text {
+            font-size: 14px;
+            color: #FFFFFF;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .playbook-right {
+            background: #FFFFFF;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: -2px 0 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .playbook-form-title {
+            font-size: 36px;
+            font-weight: 600;
+            color: #002A5B;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 40px;
+            line-height: 1.2;
+        }
+        
+        .playbook-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .playbook-form input {
+            padding: 16px 20px;
+            border: 1px solid #E6F0F7;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            color: #002A5B;
+            background: #FFFFFF;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .playbook-form input:focus {
+            outline: none;
+            border-color: #002A5B;
+            box-shadow: 0 0 0 3px rgba(0, 42, 91, 0.1);
+        }
+        
+        .playbook-form input::placeholder {
+            color: #6b7c93;
+        }
+        
+        .playbook-form-btn {
+            padding: 18px 32px;
+            background: #002A5B;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 10px;
+            box-shadow: 0 4px 12px rgba(0, 42, 91, 0.2);
+        }
+        
+        .playbook-form-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 42, 91, 0.3);
+        }
+        
+        /* Playbook Landing Section Reversed */
+        .playbook-landing-section-reversed {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            min-height: 100vh;
+        }
+        
+        .playbook-left-reversed {
+            background: #FFFFFF;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 2px 0 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .playbook-right-reversed {
+            background: linear-gradient(rgba(0, 42, 91, 0.85), rgba(0, 42, 91, 0.9)),
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 180px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        
+        @media (max-width: 968px) {
+            .playbook-landing-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .playbook-landing-section-reversed {
+                grid-template-columns: 1fr;
+            }
+            
+            .playbook-title {
+                font-size: 36px;
+            }
+            
+            .playbook-form-title {
+                font-size: 28px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1650,6 +1851,66 @@
         </div>
     </section>
     
+    <!-- Playbook Landing Section -->
+    <section class="playbook-landing-section">
+        <div class="playbook-left">
+            <div>
+                <span class="playbook-tag">Free Resources</span>
+                <h2 class="playbook-title">Alternative Investment Playbook for Advisors: 2025 Q4 Edition.</h2>
+                <p class="playbook-description">Actionable insights from the advisor's perspective simplifying how to source, evaluate, and integrate alternatives.</p>
+            </div>
+            <div class="playbook-stats">
+                <div class="playbook-stats-pics">
+                    <div class="playbook-stats-pic"></div>
+                    <div class="playbook-stats-pic"></div>
+                    <div class="playbook-stats-pic"></div>
+                </div>
+                <p class="playbook-stats-text">20K+ downloads this month</p>
+            </div>
+        </div>
+        <div class="playbook-right">
+            <h3 class="playbook-form-title">Access the Marketplace / Request a Demo</h3>
+            <form class="playbook-form" id="playbookForm">
+                <input type="text" placeholder="Your name" required>
+                <input type="text" placeholder="Your role" required>
+                <input type="text" placeholder="Name of your firm" required>
+                <input type="email" placeholder="Your email" required>
+                <input type="tel" placeholder="Your phone number" required>
+                <button type="submit" class="playbook-form-btn">Download the Playbook</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Playbook Landing Section Reversed -->
+    <section class="playbook-landing-section-reversed">
+        <div class="playbook-left-reversed">
+            <h3 class="playbook-form-title">Access the Marketplace / Request a Demo</h3>
+            <form class="playbook-form" id="playbookFormReversed">
+                <input type="text" placeholder="Your name" required>
+                <input type="text" placeholder="Your role" required>
+                <input type="text" placeholder="Name of your firm" required>
+                <input type="email" placeholder="Your email" required>
+                <input type="tel" placeholder="Your phone number" required>
+                <button type="submit" class="playbook-form-btn">Download the Playbook</button>
+            </form>
+        </div>
+        <div class="playbook-right-reversed">
+            <div>
+                <span class="playbook-tag">Free Resources</span>
+                <h2 class="playbook-title">Alternative Investment Playbook for Advisors: 2025 Q4 Edition.</h2>
+                <p class="playbook-description">Actionable insights from the advisor's perspective simplifying how to source, evaluate, and integrate alternatives.</p>
+            </div>
+            <div class="playbook-stats">
+                <div class="playbook-stats-pics">
+                    <div class="playbook-stats-pic"></div>
+                    <div class="playbook-stats-pic"></div>
+                    <div class="playbook-stats-pic"></div>
+                </div>
+                <p class="playbook-stats-text">20K+ downloads this month</p>
+            </div>
+        </div>
+    </section>
+    
     <!-- More components will be added here one by one -->
     
     <script>
@@ -1662,6 +1923,46 @@
                 header.classList.remove('scrolled');
             }
         });
+        
+        // Playbook form submission
+        const playbookForm = document.getElementById('playbookForm');
+        if (playbookForm) {
+            playbookForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const submitButton = this.querySelector('.playbook-form-btn');
+                const originalText = submitButton.textContent;
+                submitButton.disabled = true;
+                submitButton.textContent = 'Downloading...';
+                
+                // Simulate download
+                setTimeout(() => {
+                    alert('Thank you! Your download will begin shortly.');
+                    this.reset();
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalText;
+                }, 1500);
+            });
+        }
+        
+        // Playbook form reversed submission
+        const playbookFormReversed = document.getElementById('playbookFormReversed');
+        if (playbookFormReversed) {
+            playbookFormReversed.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const submitButton = this.querySelector('.playbook-form-btn');
+                const originalText = submitButton.textContent;
+                submitButton.disabled = true;
+                submitButton.textContent = 'Downloading...';
+                
+                // Simulate download
+                setTimeout(() => {
+                    alert('Thank you! Your download will begin shortly.');
+                    this.reset();
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalText;
+                }, 1500);
+            });
+        }
     </script>
 </body>
 </html>
