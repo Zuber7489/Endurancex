@@ -29,7 +29,7 @@
                 <li><a href="#about">About us</a></li>
                 <li><a href="#insights">Insights</a></li>
             </ul>
-        <button class="book-call-btn">
+        <button class="book-call-btn" id="openBookCallModal">
             Book a call
             <span class="arrow-icon">↗</span>
         </button>
@@ -744,6 +744,35 @@
             });
         }
     </script>
+    
+    <!-- Book a Call Modal -->
+    <div class="modal-overlay" id="bookCallModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeModal" aria-label="Close modal">✕</button>
+            <div class="modal-content">
+                <div class="modal-left">
+                    <div class="modal-left-content">
+                        <div class="modal-logo">
+                            <img src="assets/logo.png" alt="EnduranceX Logo">
+                        </div>
+                        <h2 class="modal-left-title">Advisor-ready access to differentiated alternative investments from leading specialist managers.</h2>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <h2 class="modal-right-title">Book a call</h2>
+                    <form class="modal-form" id="bookCallForm">
+                        <input type="text" placeholder="Your name" required>
+                        <input type="email" placeholder="Your email" required>
+                        <input type="tel" placeholder="Your phone number" required>
+                        <input type="text" placeholder="Name of your firm" required>
+                        <button type="submit" class="modal-submit-btn">Book</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
 

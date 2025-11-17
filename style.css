@@ -4140,3 +4140,330 @@ body {
     text-align: center;
     line-height: 1.5;
 }
+
+/* Book a Call Modal Styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #002A5B;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
+    transition: all 0.3s;
+    font-weight: 300;
+}
+
+.modal-close:hover {
+    background: #FFFFFF;
+    transform: rotate(90deg);
+}
+
+.modal-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    min-height: 600px;
+}
+
+.modal-left {
+    background: linear-gradient(rgba(0, 42, 91, 0.85), rgba(0, 42, 91, 0.9)),
+                url('assets/e38ba2c2841733b205ddbf46aa2c681a6d098f82.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.modal-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(255, 255, 255, 0.02) 40px,
+        rgba(255, 255, 255, 0.02) 80px
+    );
+    pointer-events: none;
+}
+
+.modal-left-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.modal-logo {
+    margin-bottom: 40px;
+}
+
+.modal-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.modal-left-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.modal-right {
+    background: #F5F7FA;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-right-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #002A5B;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-form input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: #002A5B;
+    background: #FFFFFF;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.modal-form input:focus {
+    outline: none;
+    border-color: #002A5B;
+    box-shadow: 0 0 0 3px rgba(0, 42, 91, 0.1);
+}
+
+.modal-form input::placeholder {
+    color: #999;
+}
+
+.modal-submit-btn {
+    width: 100%;
+    padding: 16px 32px;
+    background: #002A5B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+.modal-submit-btn:hover {
+    background: #003d7a;
+    transform: translateY(-2px);
+}
+
+.modal-submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Modal Responsive Styles */
+@media (max-width: 968px) {
+    .modal-content {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .modal-left {
+        padding: 50px 40px;
+        min-height: 300px;
+    }
+    
+    .modal-left-title {
+        font-size: 28px;
+    }
+    
+    .modal-right {
+        padding: 50px 40px;
+    }
+    
+    .modal-right-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .modal-form {
+        gap: 16px;
+    }
+    
+    .modal-form input {
+        padding: 14px 18px;
+        font-size: 15px;
+    }
+    
+    .modal-submit-btn {
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 640px) {
+    .modal-container {
+        border-radius: 8px;
+        margin: 10px;
+    }
+    
+    .modal-close {
+        top: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+    
+    .modal-left {
+        padding: 40px 30px;
+        min-height: 250px;
+    }
+    
+    .modal-logo {
+        margin-bottom: 30px;
+    }
+    
+    .modal-logo img {
+        height: 35px;
+    }
+    
+    .modal-left-title {
+        font-size: 24px;
+    }
+    
+    .modal-right {
+        padding: 40px 30px;
+    }
+    
+    .modal-right-title {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    
+    .modal-form input {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+    
+    .modal-submit-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-overlay {
+        padding: 10px;
+    }
+    
+    .modal-container {
+        margin: 0;
+        border-radius: 0;
+        min-height: 100vh;
+    }
+    
+    .modal-left {
+        padding: 35px 25px;
+        min-height: 200px;
+    }
+    
+    .modal-left-title {
+        font-size: 20px;
+    }
+    
+    .modal-right {
+        padding: 35px 25px;
+    }
+    
+    .modal-right-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .modal-form input {
+        padding: 11px 15px;
+        font-size: 13px;
+    }
+    
+    .modal-submit-btn {
+        padding: 11px 20px;
+        font-size: 13px;
+    }
+}
