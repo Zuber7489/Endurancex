@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EnduranceX - Private Markets Connected for Advisors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,9 +15,9 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #1a2b4a;
+            color: #002A5B;
         }
         
         /* Header Component */
@@ -39,7 +42,7 @@
         
         .header.scrolled .logo,
         .header.scrolled .nav-menu li a {
-            color: #1a2b4a;
+            color: #002A5B;
         }
         
         .logo-container {
@@ -54,6 +57,7 @@
             color: #ffffff;
             letter-spacing: 1px;
             transition: color 0.3s;
+            font-family: 'Inter', sans-serif;
         }
         
         .nav-menu {
@@ -69,16 +73,17 @@
             font-size: 16px;
             font-weight: 400;
             transition: color 0.3s;
+            font-family: 'Inter', sans-serif;
         }
         
         .nav-menu li a:hover {
-            color: #0066cc;
+            color: rgba(255, 255, 255, 0.8);
         }
         
         .book-call-btn {
             width: 140px;
             height: 40px;
-            background: #1a2b4a;
+            background: #002A5B;
             color: #ffffff;
             border: none;
             border-radius: 25px;
@@ -90,10 +95,11 @@
             justify-content: center;
             gap: 8px;
             transition: background 0.3s;
+            font-family: 'Inter', sans-serif;
         }
         
         .book-call-btn:hover {
-            background: #2a3b5a;
+            background: #003d7a;
         }
         
         .arrow-icon {
@@ -125,7 +131,8 @@
             font-weight: 400;
             line-height: 1.2;
             margin-bottom: 30px;
-            font-family: 'Georgia', 'Times New Roman', serif;
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
         }
         
         .hero-description {
@@ -133,7 +140,9 @@
             line-height: 1.7;
             margin-bottom: 40px;
             opacity: 0.95;
-            font-weight: 300;
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            color: #ffffff;
         }
         
         .hero-buttons {
@@ -147,7 +156,7 @@
         .btn-primary {
             padding: 16px 24px 16px 32px;
             background: #ffffff;
-            color: #1a2b4a;
+            color: #002A5B;
             border: none;
             border-radius: 50px;
             font-size: 16px;
@@ -157,6 +166,7 @@
             align-items: center;
             gap: 16px;
             transition: transform 0.3s, box-shadow 0.3s;
+            font-family: 'Inter', sans-serif;
         }
         
         .btn-primary:hover {
@@ -167,7 +177,7 @@
         .btn-primary .btn-icon {
             width: 36px;
             height: 36px;
-            background: #1a2b4a;
+            background: #002A5B;
             color: #ffffff;
             border-radius: 50%;
             display: flex;
@@ -207,6 +217,257 @@
             align-items: center;
             justify-content: center;
             font-size: 18px;
+        }
+        
+        /* Advisor Access Section */
+        .advisor-access-section {
+            width: 100%;
+            background: #ffffff;
+            padding: 80px 40px;
+        }
+        
+        .advisor-access-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .advisor-access-content h2 {
+            font-size: 30px;
+            font-weight: 600;
+            color: #002A5B;
+            font-family: 'Playfair Display', serif;
+            line-height: 100%;
+            letter-spacing: 0%;
+            margin-bottom: 20px;
+            max-width: 620px;
+        }
+        
+        .advisor-access-content p {
+            font-size: 30px;
+            color: #002A5B;
+            line-height: 100%;
+            letter-spacing: 0%;
+            margin-bottom: 24px;
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            max-width: 620px;
+        }
+        
+        .social-proof {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .profile-pics {
+            display: flex;
+            margin-left: -8px;
+        }
+        
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin-left: -8px;
+        }
+        
+        .profile-pic:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .profile-pic:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .social-proof-text {
+            font-size: 14px;
+            color: #002A5B;
+            font-weight: 500;
+            line-height: 100%;
+            letter-spacing: 0%;
+            font-family: 'Inter', sans-serif;
+            max-width: 398px;
+        }
+        
+        .playbook-cta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .btn-playbook {
+            padding: 16px 24px 16px 32px;
+            background: transparent;
+            color: #002A5B;
+            border: 2px solid #002A5B;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .btn-playbook:hover {
+            background: #002A5B;
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-playbook:hover .btn-icon {
+            background: #FFFFFF;
+            color: #002A5B;
+        }
+        
+        .btn-playbook .btn-icon {
+            width: 36px;
+            height: 36px;
+            background: #002A5B;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: background 0.3s, color 0.3s;
+        }
+        
+        /* Problem Section */
+        .problem-section {
+            width: 100%;
+            background: #F8FAFC;
+            padding: 100px 40px;
+        }
+        
+        .problem-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        .problem-tag {
+            display: inline-block;
+            background: #E6F0F7;
+            color: #002A5B;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 20px;
+        }
+        
+        .problem-heading {
+            font-size: 60px;
+            font-weight: 600;
+            color: #002A5B;
+            font-family: 'Playfair Display', serif;
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+        
+        .problem-subheading {
+            font-size: 20px;
+            font-weight: 500;
+            color: #002A5B;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 20px;
+        }
+        
+        .problem-arrow {
+            font-size: 24px;
+            color: #002A5B;
+            font-weight: 300;
+        }
+        
+        .problem-description {
+            font-size: 18px;
+            color: #002A5B;
+            line-height: 1.6;
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 40px;
+        }
+        
+        .problem-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .problem-item {
+            background: #FFFFFF;
+            border-radius: 50px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 1px solid #E6F0F7;
+        }
+        
+        .problem-number {
+            width: 30px;
+            height: 30px;
+            background: #002A5B;
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            flex-shrink: 0;
+        }
+        
+        .problem-item-text {
+            font-size: 16px;
+            color: #002A5B;
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .advisor-access-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .advisor-access-content h2 {
+                font-size: 24px;
+            }
+            
+            .advisor-access-content p {
+                font-size: 18px;
+            }
+            
+            .playbook-cta {
+                justify-content: flex-start;
+            }
+            
+            .problem-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .problem-heading {
+                font-size: 40px;
+            }
         }
     </style>
 </head>
@@ -248,6 +509,71 @@
                     List your fund now
                     <span class="btn-icon">↗</span>
                 </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Advisor Access Section -->
+    <section class="advisor-access-section">
+        <div class="advisor-access-container">
+            <div class="advisor-access-content">
+                <h2>Advisor-ready access to unique alternative investments</h2>
+                <p>EnduranceX is a marketplace for RIAs to access differentiated, niche, and emerging alternative asset managers.</p>
+                <div class="social-proof">
+                    <div class="profile-pics">
+                        <div class="profile-pic"></div>
+                        <div class="profile-pic"></div>
+                        <div class="profile-pic"></div>
+                    </div>
+                    <p class="social-proof-text">Accessed by leading advisors & alternative asset managers</p>
+                </div>
+            </div>
+            <div class="playbook-cta">
+                <button class="btn-playbook">
+                    Get the 2025 Alternative Investment Playbook
+                    <span class="btn-icon">↗</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="problem-container">
+            <div class="problem-left">
+                <span class="problem-tag">The Problem</span>
+                <h2 class="problem-heading">Differentiation is disappearing.<br>The same managers.<br>The same playbooks.</h2>
+                <p class="problem-subheading">Problems shared by both Advisors and Managers</p>
+                <div class="problem-arrow">→</div>
+            </div>
+            <div class="problem-right">
+                <p class="problem-description">Private markets offer immense potential but without education, broader access, and better technology, the barriers for advisors and managers limit expansion and client returns.</p>
+                <div class="problem-list">
+                    <div class="problem-item">
+                        <div class="problem-number">1</div>
+                        <p class="problem-item-text">Limited access to high-quality, differentiated strategies</p>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-number">2</div>
+                        <p class="problem-item-text">RIA saturation. Same managers and playbooks.</p>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-number">3</div>
+                        <p class="problem-item-text">Market leaders care about scale and enterprise value</p>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-number">4</div>
+                        <p class="problem-item-text">Difficulty in explaining strategies and offerings</p>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-number">5</div>
+                        <p class="problem-item-text">Educational delivery modes outdated</p>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-number">6</div>
+                        <p class="problem-item-text">Workflows and systems are outdated</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
