@@ -1,5 +1,91 @@
-// Book a Call Modal Functionality
+// All JavaScript functionality
 document.addEventListener('DOMContentLoaded', function() {
+    
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navContainer = document.querySelector('.nav-container');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuToggle.classList.toggle('active');
+            navContainer.classList.toggle('active');
+            document.body.style.overflow = navContainer.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Close menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                navContainer.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navContainer.contains(event.target);
+            const isClickOnToggle = mobileMenuToggle.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && navContainer.classList.contains('active')) {
+                mobileMenuToggle.classList.remove('active');
+                navContainer.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+    
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+    
+    // Playbook form submission
+    const playbookForm = document.getElementById('playbookForm');
+    if (playbookForm) {
+        playbookForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitButton = this.querySelector('.playbook-form-btn');
+            const originalText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Downloading...';
+            
+            // Simulate download
+            setTimeout(() => {
+                alert('Thank you! Your download will begin shortly.');
+                this.reset();
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }, 1500);
+        });
+    }
+    
+    // Playbook form reversed submission
+    const playbookFormReversed = document.getElementById('playbookFormReversed');
+    if (playbookFormReversed) {
+        playbookFormReversed.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitButton = this.querySelector('.playbook-form-btn');
+            const originalText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Downloading...';
+            
+            // Simulate download
+            setTimeout(() => {
+                alert('Thank you! Your download will begin shortly.');
+                this.reset();
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }, 1500);
+        });
+    }
+    
+    // Book a Call Modal Functionality
     const openModalBtn = document.getElementById('openBookCallModal');
     const closeModalBtn = document.getElementById('closeModal');
     const modal = document.getElementById('bookCallModal');
@@ -70,43 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.body.style.overflow = '';
                 }, 1500);
             }, 1000);
-        });
-    }
-});
-
-// Mobile Menu Toggle (if not already in HTML)
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navContainer = document.querySelector('.nav-container');
-    
-    if (mobileMenuToggle && navContainer) {
-        mobileMenuToggle.addEventListener('click', function() {
-            navContainer.classList.toggle('active');
-            mobileMenuToggle.classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking on a link
-        const navLinks = document.querySelectorAll('.nav-menu a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navContainer.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
-            });
-        });
-    }
-});
-
-// Header scroll effect (if not already in HTML)
-document.addEventListener('DOMContentLoaded', function() {
-    const header = document.querySelector('.header');
-    
-    if (header) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
         });
     }
 });
