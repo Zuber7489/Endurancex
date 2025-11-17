@@ -863,6 +863,253 @@
                 width: 40px;
             }
         }
+        
+        /* Advisor Learning Hub Section */
+        .learning-hub-section {
+            width: 100%;
+            background: #002A5B;
+            padding: 100px 40px;
+        }
+        
+        .learning-hub-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .learning-hub-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .learning-hub-tag {
+            display: inline-block;
+            background: transparent;
+            color: #FFFFFF;
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid #FFFFFF;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+        
+        .learning-hub-title {
+            font-size: 60px;
+            font-weight: 600;
+            color: #FFFFFF;
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+        }
+        
+        .learning-hub-subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+        
+        .content-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .content-card {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            min-height: 450px;
+            background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .content-card-overlay {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+            padding: 30px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        
+        .play-button {
+            width: 50px;
+            height: 50px;
+            background: transparent;
+            border: 2px solid #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        
+        .play-button::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 8px 0 8px 14px;
+            border-color: transparent transparent transparent #FFFFFF;
+            margin-left: 3px;
+        }
+        
+        .card-date {
+            font-size: 14px;
+            color: #FFFFFF;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 8px;
+        }
+        
+        .card-title {
+            font-size: 36px;
+            font-weight: 600;
+            color: #FFFFFF;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .card-button {
+            padding: 12px 20px;
+            background: #002A5B;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 12px;
+        }
+        
+        .card-description {
+            font-size: 14px;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+        
+        .subscribe-section {
+            width: 100%;
+            background: #FFFFFF;
+            padding: 80px 40px;
+        }
+        
+        .subscribe-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .subscribe-title {
+            font-size: 36px;
+            font-weight: 600;
+            color: #002A5B;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 16px;
+        }
+        
+        .subscribe-text {
+            font-size: 18px;
+            color: #002A5B;
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        
+        .subscribe-stats {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .subscribe-stats-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+        
+        .subscribe-stats-text {
+            font-size: 14px;
+            color: #002A5B;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .subscribe-btn-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .subscribe-btn {
+            padding: 16px 32px;
+            background: #002A5B;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .subscribe-btn .btn-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @media (max-width: 968px) {
+            .learning-hub-header {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .subscribe-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .subscribe-btn-container {
+                justify-content: flex-start;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1118,6 +1365,77 @@
                     <div class="diagram-arrow arrow-left"></div>
                 </div>
                 <div class="diagram-circle right">Managers</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Advisor Learning Hub Section -->
+    <section class="learning-hub-section">
+        <div class="learning-hub-container">
+            <div class="learning-hub-header">
+                <div class="learning-hub-left">
+                    <span class="learning-hub-tag">Advisor Learning Hub</span>
+                    <h2 class="learning-hub-title">Education and technology will power the growth of private markets.</h2>
+                </div>
+                <div class="learning-hub-right">
+                    <p class="learning-hub-subtitle">Our platform brings together content, research, events, and community to advance advisor education in alternatives.</p>
+                </div>
+            </div>
+            
+            <div class="content-cards">
+                <div class="content-card">
+                    <div class="play-button"></div>
+                    <div class="content-card-overlay">
+                        <div>
+                            <div class="card-date">Oct 2025</div>
+                            <h3 class="card-title">Alts Education for RIAs</h3>
+                        </div>
+                        <div>
+                            <button class="card-button">
+                                Listen to ATLalts
+                                <span>→</span>
+                            </button>
+                            <p class="card-description">Listen to conversations with new and emerging voices driving alternative investing innovation for RIAs</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-card">
+                    <div class="play-button"></div>
+                    <div class="content-card-overlay">
+                        <div>
+                            <div class="card-date">Oct 2025</div>
+                            <h3 class="card-title">The Next Credit Frontier</h3>
+                        </div>
+                        <div>
+                            <button class="card-button">
+                                Listen to Asset Backed
+                                <span>→</span>
+                            </button>
+                            <p class="card-description">Deep dive into what's missing in private credit - asset-backed finance, asset-based finance, and related opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Subscribe Section -->
+    <section class="subscribe-section">
+        <div class="subscribe-container">
+            <div class="subscribe-left">
+                <h2 class="subscribe-title">Subscribe to Asset Backed & ATLalts</h2>
+                <p class="subscribe-text">Education and clarity are the foundation of everything we do</p>
+                <div class="subscribe-stats">
+                    <div class="subscribe-stats-image">3</div>
+                    <p class="subscribe-stats-text">Thousands of downloads, hundreds of listeners and counting</p>
+                </div>
+            </div>
+            <div class="subscribe-btn-container">
+                <button class="subscribe-btn">
+                    Subscribe to listen to podcasts for free
+                    <span class="btn-icon">→</span>
+                </button>
             </div>
         </div>
     </section>
