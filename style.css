@@ -109,6 +109,15 @@ body {
 
 .arrow-icon {
     font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-icon .arrow-img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
 }
 
 .mobile-menu-toggle {
@@ -218,6 +227,12 @@ body {
     font-size: 18px;
 }
 
+.btn-primary .btn-icon .arrow-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
 .btn-secondary {
     padding: 16px 24px 16px 32px;
     background: rgba(255, 255, 255, 0.15);
@@ -249,6 +264,12 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 18px;
+}
+
+.btn-secondary .btn-icon .arrow-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
 /* Advisor Access Section */
@@ -372,6 +393,12 @@ body {
     justify-content: center;
     font-size: 18px;
     transition: background 0.3s, color 0.3s;
+}
+
+.btn-playbook .btn-icon .arrow-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
 /* Problem Section */
@@ -574,6 +601,12 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 18px;
+}
+
+.solution-btn .btn-icon .arrow-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
 .solution-right-heading {
@@ -3165,6 +3198,12 @@ body {
     font-size: 18px;
 }
 
+.subscribe-btn .btn-icon .arrow-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
 /* Subscribe for Insights Section */
 .insights-section {
     width: 100%;
@@ -3288,6 +3327,12 @@ body {
     font-size: 18px;
 }
 
+.insights-btn-primary .btn-icon .arrow-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
 .insights-btn-secondary {
     padding: 16px 24px 16px 32px;
     background: #FFFFFF;
@@ -3319,6 +3364,12 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 18px;
+}
+
+.insights-btn-secondary .btn-icon .arrow-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
 /* Playbook Landing Section */
@@ -3659,6 +3710,12 @@ body {
     font-size: 18px;
 }
 
+.curated-btn-primary .btn-icon .arrow-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
 .curated-btn-secondary {
     padding: 16px 24px 16px 32px;
     background: #002A5B;
@@ -3690,6 +3747,12 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 18px;
+}
+
+.curated-btn-secondary .btn-icon .arrow-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
 /* Events Section */
@@ -3817,6 +3880,12 @@ body {
     font-size: 18px;
 }
 
+.events-btn .btn-icon .arrow-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
 /* Join Future Section */
 .join-future-section {
     width: 100%;
@@ -3924,6 +3993,12 @@ body {
     font-size: 18px;
 }
 
+.join-btn-advisor .btn-icon .arrow-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
 .join-btn-manager {
     padding: 16px 24px 16px 32px;
     background: #FFFFFF;
@@ -3956,6 +4031,12 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 18px;
+}
+
+.join-btn-manager .btn-icon .arrow-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
 .large-arrow {
