@@ -370,7 +370,7 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-.btn-playbook:hover {
+/* .btn-playbook:hover {
     background: #002A5B;
     color: #FFFFFF;
     transform: translateY(-2px);
@@ -380,7 +380,7 @@ body {
 .btn-playbook:hover .btn-icon {
     background: #FFFFFF;
     color: #002A5B;
-}
+} */
 
 .btn-playbook .btn-icon {
     width: 36px;
