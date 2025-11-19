@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Book a Call Modal Functionality
     const openModalBtn = document.getElementById('openBookCallModal');
+    const openModalBtnPartners = document.getElementById('openBookCallModalPartners');
     const closeModalBtn = document.getElementById('closeModal');
     const modal = document.getElementById('bookCallModal');
     const bookCallForm = document.getElementById('bookCallForm');
@@ -94,6 +95,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Open modal
     if (openModalBtn) {
         openModalBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+    }
+    
+    // Open modal from partners section
+    if (openModalBtnPartners) {
+        openModalBtnPartners.addEventListener('click', function(e) {
             e.preventDefault();
             modal.classList.add('active');
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
