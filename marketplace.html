@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Marketplace Page Specific Styles */
+
+        .header .nav-container {
+            position: absolute;
+            left: 52%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+  
+        }
+
         .marketplace-hero {
             width: 100%;
             min-height: 700px;
@@ -740,11 +750,12 @@
                 <li><a href="#about">About us</a></li>
                 <li><a href="#insights">Insights</a></li>
             </ul>
-            <button class="book-call-btn" id="openBookCallModal">
-                Book a call
-                <span class="arrow-icon"><img src="assets/arrowblue.png" alt="Arrow" class="arrow-img"></span>
-            </button>
+         
         </nav>
+        <button class="book-call-btn" id="openBookCallModal">
+            Book a call
+            <span class="arrow-icon"><img src="assets/arrowblue.png" alt="Arrow" class="arrow-img"></span>
+        </button>
     </header>
 
     <!-- Marketplace Hero Section -->
