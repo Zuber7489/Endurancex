@@ -4,21 +4,45 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile Menu Toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navContainer = document.querySelector('.nav-container');
+    const navBackdrop = document.querySelector('.nav-backdrop');
     const navLinks = document.querySelectorAll('.nav-menu a');
     
+    function toggleMobileMenu() {
+        const isActive = navContainer.classList.contains('active');
+        mobileMenuToggle.classList.toggle('active');
+        navContainer.classList.toggle('active');
+        if (navBackdrop) {
+            navBackdrop.classList.toggle('active');
+        }
+        document.body.style.overflow = !isActive ? 'hidden' : '';
+    }
+    
+    function closeMobileMenu() {
+        mobileMenuToggle.classList.remove('active');
+        navContainer.classList.remove('active');
+        if (navBackdrop) {
+            navBackdrop.classList.remove('active');
+        }
+        document.body.style.overflow = '';
+    }
+    
     if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', function() {
-            mobileMenuToggle.classList.toggle('active');
-            navContainer.classList.toggle('active');
-            document.body.style.overflow = navContainer.classList.contains('active') ? 'hidden' : '';
+        mobileMenuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
         });
+        
+        // Close menu when clicking on backdrop
+        if (navBackdrop) {
+            navBackdrop.addEventListener('click', function() {
+                closeMobileMenu();
+            });
+        }
         
         // Close menu when clicking on a link
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
-                mobileMenuToggle.classList.remove('active');
-                navContainer.classList.remove('active');
-                document.body.style.overflow = '';
+                closeMobileMenu();
             });
         });
         
@@ -26,11 +50,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener('click', function(event) {
             const isClickInsideNav = navContainer.contains(event.target);
             const isClickOnToggle = mobileMenuToggle.contains(event.target);
+            const isClickOnBackdrop = navBackdrop && navBackdrop.contains(event.target);
             
-            if (!isClickInsideNav && !isClickOnToggle && navContainer.classList.contains('active')) {
-                mobileMenuToggle.classList.remove('active');
-                navContainer.classList.remove('active');
-                document.body.style.overflow = '';
+            if (!isClickInsideNav && !isClickOnToggle && !isClickOnBackdrop && navContainer.classList.contains('active')) {
+                closeMobileMenu();
             }
         });
     }
@@ -87,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Book a Call Modal Functionality
     const openModalBtn = document.getElementById('openBookCallModal');
+    const openModalBtnMobile = document.getElementById('openBookCallModalMobile');
     const openModalBtnPartners = document.getElementById('openBookCallModalPartners');
     const closeModalBtn = document.getElementById('closeModal');
     const modal = document.getElementById('bookCallModal');
@@ -98,6 +122,20 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             modal.classList.add('active');
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+    }
+    
+    // Open modal from mobile menu
+    if (openModalBtnMobile) {
+        openModalBtnMobile.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            // Close mobile menu when opening modal
+            if (mobileMenuToggle && navContainer) {
+                mobileMenuToggle.classList.remove('active');
+                navContainer.classList.remove('active');
+            }
         });
     }
     

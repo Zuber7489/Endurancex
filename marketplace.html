@@ -11,13 +11,37 @@
     <style>
         /* Marketplace Page Specific Styles */
 
-        .header .nav-container {
-            position: absolute;
-            left: 52%;
-            transform: translateX(-50%);
-            display: flex;
-            align-items: center;
-  
+        /* Desktop only - center nav */
+        @media (min-width: 969px) {
+            .header .nav-container {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex !important;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .header .book-call-btn {
+                position: absolute;
+                right: 40px;
+            }
+        }
+
+        /* Mobile - ensure nav is hidden by default and reset desktop positioning */
+        @media (max-width: 968px) {
+            .header .nav-container {
+                display: none !important;
+                position: fixed !important;
+                left: 0 !important;
+                right: 0 !important;
+                transform: translateX(-100%) !important;
+            }
+            
+            .header .nav-container.active {
+                display: flex !important;
+                transform: translateX(0) !important;
+            }
         }
 
         .marketplace-hero {
@@ -728,9 +752,12 @@
             font-size: 16px;
         }
     }
-</style>
+    </style>
 </head>
 <body>
+    <!-- Mobile Menu Backdrop -->
+    <div class="nav-backdrop"></div>
+    
     <!-- Header Component -->
     <header class="header">
         <div class="logo-container">
@@ -750,9 +777,12 @@
                 <li><a href="aboutus.html">About us</a></li>
                 <li><a href="#insights">Insights</a></li>
             </ul>
-         
+            <button class="book-call-btn mobile-book-call-btn" id="openBookCallModalMobile">
+                Book a call
+                <span class="arrow-icon"><img src="assets/arrowblue.png" alt="Arrow" class="arrow-img"></span>
+            </button>
         </nav>
-        <button class="book-call-btn" id="openBookCallModal">
+        <button class="book-call-btn desktop-book-call-btn" id="openBookCallModal">
             Book a call
             <span class="arrow-icon"><img src="assets/arrowblue.png" alt="Arrow" class="arrow-img"></span>
         </button>
