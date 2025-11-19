@@ -14,8 +14,18 @@
             padding-top: 80px;
         }
 
-        /* Header styles for About Us page */
-       
+
+
+        .header .nav-container {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+  
 
         .header .nav-menu li a {
             color: #002A5B;
@@ -23,6 +33,17 @@
 
         .header .mobile-menu-toggle {
             color: #002A5B;
+        }
+
+        .header .book-call-btn {
+            margin-left: auto;
+        }
+
+        @media (max-width: 968px) {
+            .header .nav-container {
+                position: static;
+                transform: none;
+            }
         }
 
         /* Learn About Us Section */
@@ -610,11 +631,12 @@
                 <li><a href="aboutus.html" style="font-weight: 700; opacity: 1;">About us</a></li>
                 <li><a href="#insights">Insights</a></li>
             </ul>
-            <button class="book-call-btn" id="openBookCallModal">
-                Book a call
-                <span class="arrow-icon"><img src="assets/arrowblue.png" alt="Arrow" class="arrow-img"></span>
-            </button>
+         
         </nav>
+        <button class="book-call-btn" id="openBookCallModal">
+            Book a call
+            <span class="arrow-icon"><img src="assets/arrowblue.png" alt="Arrow" class="arrow-img"></span>
+        </button>
     </header>
 
     <!-- Learn About Us Section -->
