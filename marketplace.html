@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - EnduranceX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;500;600;700&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Marketplace Page Specific Styles */
+        .marketplace-hero {
+            width: 100%;
+            min-height: 700px;
+            background: linear-gradient(rgba(0, 42, 91, 0.2), rgba(0, 42, 91, 0.2)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 20px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .marketplace-container {
+            max-width: 1340px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 242px;
+        }
+
+        .marketplace-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 164px;
+            width: 100%;
+        }
+
+        .marketplace-left {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            flex: 1;
+        }
+
+        .marketplace-text-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .marketplace-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 60px;
+            line-height: 1.333em;
+            color: #FFFFFF;
+            margin: 0;
+            text-align: left;
+        }
+
+        .marketplace-description {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.5em;
+            color: #FFFFFF;
+            max-width: 600px;
+            margin: 0;
+        }
+
+        .marketplace-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .marketplace-btn-primary {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 5px 5px 5px 15px;
+            background: #FFFFFF;
+            color: #002A5B;
+            border-radius: 30px;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 1.21em;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .marketplace-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .marketplace-btn-primary .btn-icon-circle {
+            width: 30px;
+            height: 30px;
+            background: #002A5B;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3px;
+        }
+
+        .marketplace-btn-primary .btn-icon-circle img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+
+        .marketplace-btn-secondary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 5px 5px 5px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            color: #FFFFFF;
+            border: 0.5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 1.21em;
+            cursor: pointer;
+            width: 202px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .marketplace-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .marketplace-btn-secondary .btn-icon-circle {
+            width: 30px;
+            height: 30px;
+            background: transparent;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3px;
+        }
+
+        .marketplace-btn-secondary .btn-icon-circle img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+
+        .marketplace-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+
+        .marketplace-card {
+            background: #002A5B;
+            border-radius: 30px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap: 10px;
+            width: 412px;
+        }
+
+        .marketplace-card-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1.333em;
+            color: #FFFFFF;
+            text-align: left;
+            margin: 0;
+            width: 100%;
+        }
+
+        .marketplace-arrow {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 0px 30px;
+        }
+
+        .marketplace-arrow-line {
+            width: 45px;
+            height: 5px;
+            background: #FFFFFF;
+        }
+
+        .marketplace-arrow-head {
+            width: 5px;
+            height: 5px;
+            background: #FFFFFF;
+            border-radius: 50%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1400px) {
+            .marketplace-container {
+                max-width: 100%;
+                gap: 120px;
+            }
+
+            .marketplace-content {
+                gap: 80px;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .marketplace-hero {
+                padding: 20px 30px;
+                min-height: auto;
+            }
+
+            .marketplace-container {
+                gap: 60px;
+            }
+
+            .marketplace-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 40px;
+            }
+
+            .marketplace-title {
+                font-size: 42px;
+            }
+
+            .marketplace-card {
+                width: 100%;
+                max-width: 412px;
+            }
+
+            .marketplace-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .marketplace-btn-secondary {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .marketplace-hero {
+                padding: 20px 20px;
+            }
+
+            .marketplace-container {
+                gap: 40px;
+            }
+
+            .marketplace-title {
+                font-size: 32px;
+            }
+
+            .marketplace-description {
+                font-size: 13px;
+            }
+
+            .marketplace-card {
+                width: 100%;
+            }
+
+            .marketplace-card-text {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header">
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="EnduranceX Logo">
+            </a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span class="hamburger-icon">☰</span>
+            <span class="close-icon">✕</span>
+        </button>
+        <nav class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="marketplace.html" style="font-weight: 700; opacity: 1;">Marketplace</a></li>
+                <li><a href="#podcast">Podcast</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#insights">Insights</a></li>
+            </ul>
+            <button class="book-call-btn" id="openBookCallModal">
+                Book a call
+                <span class="arrow-icon"><img src="assets/arrowblue.png" alt="Arrow" class="arrow-img"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Marketplace Hero Section -->
+    <section class="marketplace-hero">
+        <div class="marketplace-container">
+            <div class="marketplace-content">
+                <div class="marketplace-left">
+                    <div class="marketplace-text-section">
+                        <h1 class="marketplace-title">Agnostic, All-Digital<br>Alts Technology</h1>
+                        <p class="marketplace-description">
+                            Enables seamless access to an essential distribution channel where wealth advisors and allocators may integrate, access, diligence, share, onboard and transact for clients in an all-digital, paperless environment.
+                        </p>
+                    </div>
+                    <div class="marketplace-buttons">
+                        <button class="marketplace-btn-primary" id="openRequestAccessModalMarketplace">
+                            Access our marketplace
+                            <span class="btn-icon-circle">
+                                <img src="assets/arrowblue.png" alt="Arrow">
+                            </span>
+                        </button>
+                        <button class="marketplace-btn-secondary" id="openBookCallModalMarketplace">
+                            Book a call with us
+                            <span class="btn-icon-circle">
+                                <img src="assets/arrowwhite.png" alt="Arrow">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="marketplace-right">
+                    <div class="marketplace-card">
+                        <p class="marketplace-card-text">
+                            EnduranceX provides bespoke, digital technology & infrastructure solutions for RIAs, Broker-Dealers, Family Offices, and Investment Managers
+                        </p>
+                    </div>
+                    <div class="marketplace-arrow">
+                        <div class="marketplace-arrow-line"></div>
+                        <div class="marketplace-arrow-head"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book a Call Modal -->
+    <div class="modal-overlay" id="bookCallModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeModal" aria-label="Close modal">✕</button>
+            <div class="modal-content">
+                <div class="modal-left">
+                    <div class="modal-left-content">
+                        <div class="modal-logo">
+                            <img src="assets/logo.png" alt="EnduranceX Logo">
+                        </div>
+                        <h2 class="modal-left-title">Advisor-ready access to differentiated alternative investments from leading specialist managers.</h2>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <h2 class="modal-right-title">Book a call</h2>
+                    <form class="modal-form" id="bookCallForm">
+                        <input type="text" placeholder="Your name" required>
+                        <input type="email" placeholder="Your email" required>
+                        <input type="tel" placeholder="Your phone number" required>
+                        <input type="text" placeholder="Name of your firm" required>
+                        <button type="submit" class="modal-submit-btn">Book</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Request Access Modal -->
+    <div class="modal-overlay" id="requestAccessModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeRequestAccessModal" aria-label="Close modal">✕</button>
+            <div class="modal-content">
+                <div class="modal-left">
+                    <div class="modal-left-content">
+                        <div class="modal-logo">
+                            <img src="assets/logo.png" alt="EnduranceX Logo">
+                        </div>
+                        <h2 class="modal-left-title">Experiences. Authentic engagement. Learning. Partnership building.</h2>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <h2 class="modal-right-title">Ready to access EnduranceX events?</h2>
+                    <form class="modal-form" id="requestAccessForm">
+                        <input type="text" placeholder="Your name" required>
+                        <input type="email" placeholder="Your email" required>
+                        <input type="tel" placeholder="Your phone number" required>
+                        <input type="text" placeholder="Name of your firm" required>
+                        <input type="text" placeholder="Your position" required>
+                        <button type="submit" class="modal-submit-btn">Request access</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Marketplace specific modal handlers
+        document.addEventListener('DOMContentLoaded', function() {
+            const openBookCallMarketplace = document.getElementById('openBookCallModalMarketplace');
+            const openRequestAccessMarketplace = document.getElementById('openRequestAccessModalMarketplace');
+            const bookCallModal = document.getElementById('bookCallModal');
+            const requestAccessModal = document.getElementById('requestAccessModal');
+
+            if (openBookCallMarketplace) {
+                openBookCallMarketplace.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    bookCallModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+
+            if (openRequestAccessMarketplace) {
+                openRequestAccessMarketplace.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    requestAccessModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
