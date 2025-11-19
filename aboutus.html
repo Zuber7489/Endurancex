@@ -96,6 +96,95 @@
                 font-size: 16px;
             }
         }
+
+        /* Our Mission Section */
+        .our-mission-section {
+            width: 100%;
+            background: #E6F0F7;
+            padding: 100px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .our-mission-section::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: rgba(0, 42, 91, 0.1);
+            transform: translateX(-50%);
+        }
+
+        .our-mission-container {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .our-mission-heading {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 60px;
+            line-height: 1.2em;
+            color: #002A5B;
+            margin: 0;
+            text-align: left;
+        }
+
+        .our-mission-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 1.6em;
+            color: #002A5B;
+            margin: 0;
+            text-align: left;
+        }
+
+        @media (max-width: 968px) {
+            .our-mission-section {
+                padding: 60px 50px;
+            }
+
+            .our-mission-section::before {
+                display: none;
+            }
+
+            .our-mission-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .our-mission-heading {
+                font-size: 42px;
+            }
+
+            .our-mission-text {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .our-mission-section {
+                padding: 40px 30px;
+            }
+
+            .our-mission-heading {
+                font-size: 32px;
+            }
+
+            .our-mission-text {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -134,6 +223,20 @@
             <div class="learn-about-right">
                 <p class="learn-about-text">
                     EnduranceX is redefining democratization of alternative investments and connecting RIAs and wealth professionals with specialist alts managers using our technology solutions. Our mission: Helping investors stay ahead of the curve in private markets.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="our-mission-section">
+        <div class="our-mission-container">
+            <div class="our-mission-left">
+                <h2 class="our-mission-heading">Our mission</h2>
+            </div>
+            <div class="our-mission-right">
+                <p class="our-mission-text">
+                    Helping investors stay ahead of the curve in private markets.
                 </p>
             </div>
         </div>
