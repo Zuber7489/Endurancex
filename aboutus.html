@@ -374,14 +374,14 @@
             color: #FFFFFF;
             border: none;
             padding: 16px 32px;
-            border-radius: 8px;
+            border-radius: 50px;
             font-family: 'Inter', sans-serif;
             font-weight: 500;
             font-size: 16px;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             transition: all 0.3s ease;
         }
 
@@ -391,17 +391,20 @@
         }
 
         .partners-cta-button .arrow-icon {
-            width: 20px;
-            height: 20px;
+            width: 32px;
+            height: 32px;
+            background: #FFFFFF;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-shrink: 0;
         }
 
         .partners-cta-button .arrow-icon img {
-            width: 100%;
-            height: 100%;
-            filter: brightness(0) invert(1);
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
         }
 
         .partners-logos {
