@@ -280,7 +280,7 @@ body {
 }
 
 .btn-primary {
-    padding: 16px 24px 16px 32px;
+    padding: 5px 12px 5px 12px;
     background: #ffffff;
     color: #002A5B;
     border: none;
@@ -319,7 +319,7 @@ body {
 }
 
 .btn-secondary {
-    padding: 16px 24px 16px 32px;
+    padding: 5px 12px 5px 12px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     color: #ffffff;
