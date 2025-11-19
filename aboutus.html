@@ -15,7 +15,7 @@
         }
 
         /* Header styles for About Us page */
-      
+       
 
         .header .nav-menu li a {
             color: #002A5B;
@@ -23,6 +23,78 @@
 
         .header .mobile-menu-toggle {
             color: #002A5B;
+        }
+
+        /* Learn About Us Section */
+        .learn-about-section {
+            width: 100%;
+            background: #FFFFFF;
+            padding: 100px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .learn-about-container {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: flex-start;
+        }
+
+        .learn-about-heading {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 60px;
+            line-height: 1.2em;
+            color: #002A5B;
+            margin: 0;
+            text-align: left;
+        }
+
+        .learn-about-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 1.6em;
+            color: #002A5B;
+            margin: 0;
+            text-align: left;
+        }
+
+        @media (max-width: 968px) {
+            .learn-about-section {
+                padding: 60px 50px;
+            }
+
+            .learn-about-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .learn-about-heading {
+                font-size: 42px;
+            }
+
+            .learn-about-text {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .learn-about-section {
+                padding: 40px 30px;
+            }
+
+            .learn-about-heading {
+                font-size: 32px;
+            }
+
+            .learn-about-text {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -53,8 +125,19 @@
         </nav>
     </header>
 
-    <!-- About Us Content Sections will be added here -->
-    <!-- Components will be arranged one below the other as you provide them -->
+    <!-- Learn About Us Section -->
+    <section class="learn-about-section">
+        <div class="learn-about-container">
+            <div class="learn-about-left">
+                <h1 class="learn-about-heading">Learn about us</h1>
+            </div>
+            <div class="learn-about-right">
+                <p class="learn-about-text">
+                    EnduranceX is redefining democratization of alternative investments and connecting RIAs and wealth professionals with specialist alts managers using our technology solutions. Our mission: Helping investors stay ahead of the curve in private markets.
+                </p>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer Section -->
     <footer class="footer-section">
