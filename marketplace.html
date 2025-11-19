@@ -583,6 +583,177 @@
             font-size: 16px;
         }
     }
+
+    /* Join Future CTA Section Styles */
+    .join-future-cta-section {
+        width: 100%;
+        background: linear-gradient(rgba(0, 42, 91, 0.2), rgba(0, 42, 91, 0.2)), 
+                    url('assets/e38ba2c2841733b205ddbf46aa2c681a6d098f82.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 80px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        position: relative;
+    }
+
+    .join-future-cta-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .join-future-cta-title {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 1.21em;
+        color: #FFFFFF;
+        text-align: center;
+        margin: 0;
+    }
+
+    .join-future-cta-description {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.21em;
+        color: #FFFFFF;
+        text-align: center;
+        max-width: 600px;
+        margin: 0;
+    }
+
+    .join-future-cta-buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .join-future-cta-btn-advisor {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 5px 5px 15px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        color: #FFFFFF;
+        border: 0.5px solid rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1.21em;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    .join-future-cta-btn-advisor:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .join-future-cta-btn-advisor .btn-icon-circle {
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3px;
+    }
+
+    .join-future-cta-btn-advisor .btn-icon-circle img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
+
+    .join-future-cta-btn-manager {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 5px 5px 15px;
+        background: #FFFFFF;
+        color: #002A5B;
+        border: none;
+        border-radius: 30px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1.21em;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .join-future-cta-btn-manager:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .join-future-cta-btn-manager .btn-icon-circle {
+        width: 30px;
+        height: 30px;
+        background: #002A5B;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3px;
+    }
+
+    .join-future-cta-btn-manager .btn-icon-circle img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
+
+    @media (max-width: 968px) {
+        .join-future-cta-section {
+            padding: 60px 30px;
+        }
+
+        .join-future-cta-title {
+            font-size: 36px;
+        }
+
+        .join-future-cta-description {
+            font-size: 13px;
+        }
+
+        .join-future-cta-buttons {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .join-future-cta-btn-advisor,
+        .join-future-cta-btn-manager {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .join-future-cta-section {
+            padding: 40px 20px;
+        }
+
+        .join-future-cta-title {
+            font-size: 28px;
+        }
+
+        .join-future-cta-description {
+            font-size: 12px;
+        }
+    }
 </style>
 </head>
 <body>
@@ -725,6 +896,30 @@
         </div>
     </section>
 
+    <!-- Join Future CTA Section -->
+    <section class="join-future-cta-section">
+        <div class="join-future-cta-content">
+            <h2 class="join-future-cta-title">Join the Future of Private Markets</h2>
+            <p class="join-future-cta-description">
+                EnduranceX makes private markets accessible, transparent, and efficient through technology, education, and experience.
+            </p>
+        </div>
+        <div class="join-future-cta-buttons">
+            <button class="join-future-cta-btn-advisor" id="openRequestAccessModalCTA">
+                I'm an Advisor → Request Access
+                <span class="btn-icon-circle">
+                    <img src="assets/arrowwhite.png" alt="Arrow">
+                </span>
+            </button>
+            <button class="join-future-cta-btn-manager" id="openManagerModalCTA">
+                I'm a Manager → Join Marketplace
+                <span class="btn-icon-circle">
+                    <img src="assets/arrowblue.png" alt="Arrow">
+                </span>
+            </button>
+        </div>
+    </section>
+
     <!-- Book a Call Modal -->
     <div class="modal-overlay" id="bookCallModal">
         <div class="modal-container">
@@ -780,6 +975,35 @@
         </div>
     </div>
 
+    <!-- Manager Modal -->
+    <div class="modal-overlay" id="managerModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeManagerModal" aria-label="Close modal">✕</button>
+            <div class="modal-content">
+                <div class="modal-left">
+                    <div class="modal-left-content">
+                        <div class="modal-logo">
+                            <img src="assets/logo.png" alt="EnduranceX Logo">
+                        </div>
+                        <h2 class="modal-left-title">We are continually seeking to build partnerships with specialist and differentiated alternative investment managers that demonstrate targeted excellence and a commitment to and capacity for pursuing the private wealth channel.</h2>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <h2 class="modal-right-title">List my fund or offering on EnduranceX</h2>
+                    <form class="modal-form" id="managerForm">
+                        <input type="text" placeholder="Your name" required>
+                        <input type="email" placeholder="Your email" required>
+                        <input type="tel" placeholder="Your phone number" required>
+                        <input type="text" placeholder="Investment Strategy" required>
+                        <input type="text" placeholder="Name of your firm" required>
+                        <input type="text" placeholder="Your position" required>
+                        <button type="submit" class="modal-submit-btn">Request a call back</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
     <script>
         // Marketplace specific modal handlers
@@ -802,6 +1026,29 @@
                     e.preventDefault();
                     requestAccessModal.classList.add('active');
                     document.body.style.overflow = 'hidden';
+                });
+            }
+
+            // CTA Section Modal Handlers
+            const openRequestAccessCTA = document.getElementById('openRequestAccessModalCTA');
+            const openManagerCTA = document.getElementById('openManagerModalCTA');
+            const managerModal = document.getElementById('managerModal');
+
+            if (openRequestAccessCTA) {
+                openRequestAccessCTA.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    requestAccessModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+
+            if (openManagerCTA) {
+                openManagerCTA.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (managerModal) {
+                        managerModal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    }
                 });
             }
         });
