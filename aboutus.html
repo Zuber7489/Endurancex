@@ -185,6 +185,136 @@
                 font-size: 16px;
             }
         }
+
+        /* EnduranceX Team Section */
+        .team-section {
+            width: 100%;
+            background: #002A5B;
+            padding: 100px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .team-container {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: flex-start;
+        }
+
+        .team-heading {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 60px;
+            line-height: 1.2em;
+            color: #FFFFFF;
+            margin: 0;
+            text-align: left;
+        }
+
+        .team-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .team-description {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 1.6em;
+            color: #FFFFFF;
+            margin: 0;
+            text-align: left;
+        }
+
+        .team-profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .team-profile-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .team-profile-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .team-profile-name {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 1.3em;
+            color: #FFFFFF;
+            margin: 0;
+        }
+
+        .team-profile-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5em;
+            color: #FFFFFF;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 968px) {
+            .team-section {
+                padding: 60px 50px;
+            }
+
+            .team-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .team-heading {
+                font-size: 42px;
+            }
+
+            .team-description {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .team-section {
+                padding: 40px 30px;
+            }
+
+            .team-heading {
+                font-size: 32px;
+            }
+
+            .team-description {
+                font-size: 16px;
+            }
+
+            .team-profile-image {
+                width: 70px;
+                height: 70px;
+            }
+
+            .team-profile-name {
+                font-size: 18px;
+            }
+
+            .team-profile-title {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -238,6 +368,29 @@
                 <p class="our-mission-text">
                     Helping investors stay ahead of the curve in private markets.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EnduranceX Team Section -->
+    <section class="team-section">
+        <div class="team-container">
+            <div class="team-left">
+                <h2 class="team-heading">The EnduranceX<br>Team</h2>
+            </div>
+            <div class="team-right">
+                <div class="team-content">
+                    <p class="team-description">
+                        Our team combines decades of experience across finance, technology, and alternative investments, with a shared passion for building a smarter, more connected investment infrastructure.
+                    </p>
+                    <div class="team-profile">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces" alt="Andres Sandate" class="team-profile-image">
+                        <div class="team-profile-info">
+                            <h3 class="team-profile-name">Andres Sandate</h3>
+                            <p class="team-profile-title">Founder and CEO</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
