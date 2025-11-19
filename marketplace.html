@@ -282,11 +282,164 @@
                 width: 100%;
             }
 
-            .marketplace-card-text {
-                font-size: 18px;
-            }
+        .marketplace-card-text {
+            font-size: 18px;
         }
-    </style>
+    }
+
+    /* RIAs Section Styles */
+    .rias-section {
+        width: 100%;
+        background: #FFFFFF;
+        padding: 80px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .rias-section-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1440px;
+        height: 688px;
+        object-fit: cover;
+        z-index: 0;
+        opacity: 0.1;
+    }
+
+    .rias-container {
+        max-width: 1400px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .rias-title {
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 1.333em;
+        color: #002A5B;
+        margin: 0;
+        text-align: left;
+        width: 600px;
+        flex-shrink: 0;
+    }
+
+    .rias-description {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 1.21em;
+        color: #002A5B;
+        margin: 0;
+        text-align: left;
+        width: 630px;
+        flex: 1;
+    }
+
+    @media (max-width: 1400px) {
+        .rias-section-bg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .rias-container {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .rias-title,
+        .rias-description {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 968px) {
+        .rias-section {
+            padding: 60px 50px;
+        }
+
+        .rias-title {
+            font-size: 42px;
+        }
+
+        .rias-description {
+            font-size: 28px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .rias-section {
+            padding: 40px 30px;
+        }
+
+        .rias-title {
+            font-size: 32px;
+        }
+
+        .rias-description {
+            font-size: 20px;
+        }
+    }
+
+    /* Device Mockup Section Styles */
+    .device-mockup-section {
+        width: 100%;
+        background: #002A5B;
+        padding: 80px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .device-mockup-container {
+        max-width: 1440px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .device-mockup-image {
+        width: 100%;
+        max-width: 1240px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+    @media (max-width: 1400px) {
+        .device-mockup-section {
+            padding: 60px 50px;
+        }
+    }
+
+    @media (max-width: 968px) {
+        .device-mockup-section {
+            padding: 40px 30px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .device-mockup-section {
+            padding: 30px 20px;
+        }
+    }
+</style>
 </head>
 <body>
     <!-- Header Component -->
@@ -353,6 +506,24 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- RIAs Section -->
+    <section class="rias-section">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1440&q=80" alt="Background" class="rias-section-bg">
+        <div class="rias-container">
+            <h2 class="rias-title">For RIAs, Broker-Dealers, and Family Offices</h2>
+            <p class="rias-description">
+                EnduranceX is a private investment platform, or build your own, including customized access vehicles, legacy investments, co-investments, SPVs, and more- all supported by our technology and infrastructure, and integrated with the service providers and reporting systems of your choice.
+            </p>
+        </div>
+    </section>
+
+    <!-- Device Mockup Section -->
+    <section class="device-mockup-section">
+        <div class="device-mockup-container">
+            <img src="assets/laptop.png" alt="EnduranceX Platform Screenshot" class="device-mockup-image">
         </div>
     </section>
 
