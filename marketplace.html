@@ -439,6 +439,150 @@
             padding: 30px 20px;
         }
     }
+
+    /* Features Section Styles */
+    .features-section {
+        width: 100%;
+        background: #FFFFFF;
+        padding: 80px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .features-section-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1440px;
+        height: 1100px;
+        object-fit: cover;
+        z-index: 0;
+        opacity: 0.1;
+    }
+
+    .features-container {
+        max-width: 1400px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .features-row {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .feature-card {
+        background: #DEE7F2;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 151px;
+        width: 610px;
+        height: 300px;
+        flex-shrink: 0;
+    }
+
+    .feature-card-title {
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 1.333em;
+        color: #002A5B;
+        margin: 0;
+        text-align: left;
+        width: 570px;
+    }
+
+    .feature-card-description {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.21em;
+        color: #002A5B;
+        margin: 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    @media (max-width: 1400px) {
+        .features-section-bg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .features-row {
+            justify-content: center;
+        }
+
+        .feature-card {
+            width: 100%;
+            max-width: 610px;
+        }
+
+        .feature-card-title {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 968px) {
+        .features-section {
+            padding: 60px 50px;
+        }
+
+        .features-row {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .feature-card {
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+            gap: 30px;
+        }
+
+        .feature-card-title {
+            font-size: 26px;
+        }
+
+        .feature-card-description {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .features-section {
+            padding: 40px 30px;
+        }
+
+        .feature-card {
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .feature-card-title {
+            font-size: 24px;
+            width: 100%;
+        }
+
+        .feature-card-description {
+            font-size: 16px;
+        }
+    }
 </style>
 </head>
 <body>
@@ -524,6 +668,60 @@
     <section class="device-mockup-section">
         <div class="device-mockup-container">
             <img src="assets/laptop.png" alt="EnduranceX Platform Screenshot" class="device-mockup-image">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1440&q=80" alt="Background" class="features-section-bg">
+        <div class="features-container">
+            <!-- First Row -->
+            <div class="features-row">
+                <div class="feature-card">
+                    <h3 class="feature-card-title">Private Investments Digitized</h3>
+                    <p class="feature-card-description">
+                        The EnduranceX marketplace digitizes private markets investing to enable wealth advisors and family offices to access compelling, dynamic, unique and differentiated alts managers and offerings.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-card-title">Digitize</h3>
+                    <p class="feature-card-description">
+                        Fully digital alts marketplace featuring the latest capabilities in wealth tech and alts tech.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="features-row">
+                <div class="feature-card">
+                    <h3 class="feature-card-title">Distribute and Engage</h3>
+                    <p class="feature-card-description">
+                        We invite qualified investors across private wealth, including RIAs and family offices, to view and diligence alternative investment offerings in the EnduranceX marketplace in a paperless, fully digitized environment. Investment managers can syndicate and distribute their offerings to private wealth more fluidly and sustainably to capture economies of scale and efficiency at a fraction of the cost of alternatives.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-card-title">Centralized Platform</h3>
+                    <p class="feature-card-description">
+                        With a single sign-on everything is accessible: KYC/AML features, due diligence, subscription, funding, reporting, and more
+                    </p>
+                </div>
+            </div>
+
+            <!-- Third Row -->
+            <div class="features-row">
+                <div class="feature-card">
+                    <h3 class="feature-card-title">Accelerate and Scale</h3>
+                    <p class="feature-card-description">
+                        Investors can be onboarded via a digital, auto-fill subscription process and permissioning features allow home offices, diligence teams, service providers, other advisor teams, registered reps, and prospective clients to review offerings.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-card-title">Secure</h3>
+                    <p class="feature-card-description">
+                        SaaS platform utilizes end-to-end digital encryption and multi-factor authentication (MFA) to ensure data is locked down
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
