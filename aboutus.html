@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EnduranceX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;500;600;700&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* About Us Page Specific Styles */
+        body {
+            padding-top: 80px;
+        }
+
+        /* Header styles for About Us page */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .nav-menu li a {
+            color: #002A5B;
+        }
+
+        .header .mobile-menu-toggle {
+            color: #002A5B;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header">
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="EnduranceX Logo">
+            </a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span class="hamburger-icon">☰</span>
+            <span class="close-icon">✕</span>
+        </button>
+        <nav class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="#podcast">Podcast</a></li>
+                <li><a href="aboutus.html" style="font-weight: 700; opacity: 1;">About us</a></li>
+                <li><a href="#insights">Insights</a></li>
+            </ul>
+            <button class="book-call-btn" id="openBookCallModal">
+                Book a call
+                <span class="arrow-icon"><img src="assets/arrowblue.png" alt="Arrow" class="arrow-img"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- About Us Content Sections will be added here -->
+    <!-- Components will be arranged one below the other as you provide them -->
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="EnduranceX Logo">
+                </div>
+                <div class="footer-socials">
+                    <h3 class="socials-heading">Our socials</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="X (Twitter)">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-nav">
+                <div class="footer-nav-column">
+                    <h3 class="footer-nav-heading">Menu</h3>
+                    <ul class="footer-nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="#podcast">Podcasts</a></li>
+                        <li><a href="aboutus.html">About us</a></li>
+                        <li><a href="#insights">Insights</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-nav-column">
+                    <h3 class="footer-nav-heading">Resources</h3>
+                    <ul class="footer-nav-links">
+                        <li><a href="#insights">Insights</a></li>
+                        <li><a href="#atlalts">ATLalts</a></li>
+                        <li><a href="#asset-backed">Asset Backed</a></li>
+                        <li><a href="#playbook">Investment Playbook</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-nav-column">
+                    <h3 class="footer-nav-heading">Quick links</h3>
+                    <ul class="footer-nav-links">
+                        <li><a href="#terms">Terms of service</a></li>
+                        <li><a href="#privacy">Privacy Policies</a></li>
+                        <li><a href="#disclosures">Disclosures</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-contact">
+                <div class="contact-section">
+                    <h3 class="contact-heading">Contacts</h3>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <a href="mailto:andres@endurancex.io">andres@endurancex.io</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <a href="tel:404-550-8081">404-550-8081</a>
+                    </div>
+                </div>
+                
+                <div class="address-section">
+                    <h3 class="contact-heading">Address</h3>
+                    <p class="address-text">400 Downfield Way</p>
+                    <p class="address-text">Smyrna, GA 30082</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-disclaimer">
+            <p>Andres Sandate is an Investment Advisor Representative of Gramercy Park Wealth Advisors, LLC and Registered Representative of GPWA, LLC, Member FINRA/SIPC.</p>
+        </div>
+    </footer>
+
+    <!-- Book a Call Modal -->
+    <div class="modal-overlay" id="bookCallModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeModal" aria-label="Close modal">✕</button>
+            <div class="modal-content">
+                <div class="modal-left">
+                    <div class="modal-left-content">
+                        <div class="modal-logo">
+                            <img src="assets/logo.png" alt="EnduranceX Logo">
+                        </div>
+                        <h2 class="modal-left-title">Advisor-ready access to differentiated alternative investments from leading specialist managers.</h2>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <h2 class="modal-right-title">Book a call</h2>
+                    <form class="modal-form" id="bookCallForm">
+                        <input type="text" placeholder="Your name" required>
+                        <input type="email" placeholder="Your email" required>
+                        <input type="tel" placeholder="Your phone number" required>
+                        <input type="text" placeholder="Name of your firm" required>
+                        <button type="submit" class="modal-submit-btn">Book</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
